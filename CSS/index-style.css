@@ -1,0 +1,48 @@
+h1 span{
+    display: inline-block;
+    font-family: 'Prata', serif;
+}
+
+.hero{
+    background-image: url(/Images/greeny.png);
+    background-size: 850px 600px;
+    justify-content: space-evenly;
+    margin: 100px 20px 20px 20px;
+    padding-top: 70px;
+}
+
+.hero img{
+    border-radius: 100px 0px 0px 0px;
+}
+
+.row2{
+    gap: 100px;
+}
+
+.subheader{
+    width: 720px;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.blobby{
+    background-image: url(/Images/Blobby.png);
+    height: 700px;
+    justify-content: center;
+    background-position: center;
+
+}
+
+.carousel{
+    flex-direction: row;
+    gap: 50px;
+}
+
+.latest-card{
+    background-color: white;
+    width: 330px;
+    height: 450px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}

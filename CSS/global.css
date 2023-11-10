@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Kadwa&family=Merriweather+Sans&family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Prata&family=Rock+Salt&display=swap');
+
+*{ 
+    text-decoration: none;
+    list-style-type: none;
+    color: #8f6757; /*#663F46*/
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: 0;
+    background-repeat: no-repeat;
+    
+}
+
+html{
+    background-color: #8f6757;
+}
+
+header{
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+}
+
+nav{
+    justify-content: space-between;
+    margin-top: 60px;
+    padding: 0px 20px 20px 20px;
+}
+
+nav ul{
+    gap: 30px;
+    font-size: 20px;
+}
+
+.bookwormTitle{
+    font-size: 25px;
+    align-items: center;
+    gap: 10px;
+}
+
+h1{
+    font-size: 100px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 1000px;
+}
+
+h2{
+    font-size: 40px;  
+}
+
+
+.flexbox{
+    display: flex;
+}
+
+
+.left-30{
+    margin-left: 30px
+}
+
+.align-center{
+    align-items: center;
+}
+
+.prata{
+    font-family: 'Prata', serif;
+}
+
+.green{
+    background: #EDE9D0;
+}
+
+.beige{
+    background-color: #FFF7F2;
+
+}
+
+.content-wrapper{
+    max-width: 1700px;
+    margin: 0 auto;
+    flex-direction: column;
+    box-shadow: 0px 5px 10px #272524;
+}
+
+.divider{
+    justify-content: center;
+    height: 350px;
+    margin: 150px 0px 150px 0px;
+}
