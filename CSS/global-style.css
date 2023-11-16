@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Kadwa&family=Merriweather+Sans&family=Plus+Jakarta+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Rock+Salt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Prata&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Prata&display=swap');
+
 
 *{ 
     text-decoration: none;
@@ -16,10 +15,8 @@ html{
     background-color: #8f6757;
 }
 
-header{
-    justify-content: space-between;
+.column{
     flex-direction: column;
-    display: flex;
 }
 
 nav{
@@ -39,15 +36,6 @@ nav ul{
     gap: 10px;
 }
 
-h1{
-    font-size: 100px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 1000px;
-}
-
-h2{
-    font-size: 40px;  
-}
 
 
 .flexbox{
@@ -81,10 +69,12 @@ h2{
     margin: 0 auto;
     flex-direction: column;
     box-shadow: 0px 5px 10px #272524;
+    width: 100%;
 }
 
 .divider{
     justify-content: center;
-    height: 350px;
+    height: 230px;
     margin: 150px 0px 150px 0px;
 }
+
