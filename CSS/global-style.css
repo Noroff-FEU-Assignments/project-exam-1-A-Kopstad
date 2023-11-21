@@ -37,7 +37,6 @@ nav ul{
 }
 
 
-
 .flexbox{
     display: flex;
 }
@@ -64,6 +63,15 @@ nav ul{
 
 }
 
+.white{
+    background-color: #ffffff;
+}
+
+.border-green{
+    border: 10px solid #EDE9D0;
+
+}
+
 .content-wrapper{
     max-width: 1700px;
     margin: 0 auto;
@@ -78,3 +86,53 @@ nav ul{
     margin: 150px 0px 150px 0px;
 }
 
+.reading-list{
+    gap: 25px;
+    padding: 20px;
+}
+
+.reading-list h2{
+    text-decoration: underline 2px solid;
+}
+
+.reading-list ul{
+    gap: 25px;
+}
+.reading-list li{
+    list-style-type: disclosure-closed;
+}
+
+.follow{
+    gap: 30px;
+    padding: 20px;
+    text-decoration: underline 2px solid;
+}
+
+.follow ul{
+    gap: 25px;
+    padding: 0;
+}
+
+.follow img{
+    width: 50px;
+}
+
+.sally{
+    border: 10px solid #EDE9D0;
+    width: 200px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    line-height: 30px;
+}
+
+.sally img{
+    width: 200px;
+    height: 200px;
+    align-self: center
+}
+
+.farewell{
+    word-wrap: break-word;
+    width: 60px;
+}

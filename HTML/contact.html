@@ -11,7 +11,7 @@
     />
     <title>The Bookworm Club</title>
     <link rel="stylesheet" href="/CSS/global-style.css" />
-    <link rel="stylesheet" href="/CSS/blog-style.css" />
+    <link rel="stylesheet" href="/CSS/contact-style.css" />
   </head>
 
   <body class="flexbox">
@@ -26,55 +26,47 @@
             <li><a href="/index.html">Home</a></li>
             <li><a href="/HTML/about.html">About</a></li>
             <li><a href="/HTML/blog.html">Blog</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="/HTML/contact.html">Contact</a></li>
           </ul>
         </nav>
       </header>
 
       <main>
         <div class="divider flexbox align-center green">
-          <h1 class="prata">Archive</h1>
+          <h1 class="prata">Welcome to the Bookworm Club!</h1>
+          <p>Last updated: Nov 17, 2023</p>
         </div>
         <div class="grid">
-          <div class="collection grid">
-            <div class="row1 flexbox">
-              <div
-                class="archive-post flexbox column align-center border-green"
-              >
-                <img src="/Images/autumn.png" alt="" />
-                <a href="HTML/blogpost.html"><p>Autumn top 10 books</p></a>
-              </div>
-              <div
-                class="archive-post column flexbox align-center border-green"
-              >
-                <img src="/Images/magic.png" alt="" />
-                <a href="HTML/blogpost.html"
-                  ><p></p>
-                  <p>Rick Riordan's Literary Universe</p></a
-                >
-              </div>
-            </div>
-            <div class="row2 flexbox">
-              <div
-                class="archive-post column flexbox align-center border-green"
-              >
-                <img src="/Images/twilight.jpeg" alt="" />
-                <a href="HTML/blogpost.html"><p>Book review:</p></a>
-              </div>
-              <div
-                class="archive-post column flexbox align-center border-green"
-              >
-                <img src="/Images/twilight.jpeg" alt="" />
-                <a href="HTML/blogpost.html"><p>Autumn top 10 books</p></a>
+          <article class="blogpost-article flexbox">
+            <div>
+              <div class="flexbox column">
+                <div>
+                    <p>Have a burning question about your favorite book? Or perhaps you just want to share the excitement of a
+                        recently discovered literary gem? We're all ears! Drop us a line using the form below, and let the bookish
+                        conversations begin!</p>
+                </div>
+                <form>
+                    <input 
+                    type = "text" 
+                    name = "Name"
+                    id = "Name"
+                    />
+                    <label for="Name">Name </label>
+                    
+                    <input 
+                    type="email" 
+                    name="e-mail" 
+                    id="e-mail"
+                    />
+                    <label for="e-mail">E-mail address</label>
+
+
+                </form>
               </div>
             </div>
-            <div class="archive-post flexbox align-center border-green cocoa">
-              <img src="/Images/hotcocoa.png" alt="" />
-              <a href="HTML/blogpost.html"><p>Christmas is coming</p></a>
-            </div>
-          </div>
+          </article>
           <div class="grid-column-2 flexbox">
-            <section class="sally center flexbox border-green">
+            <section class="sally center flexbox">
               <img src="/Images/sal.png" alt="" />
               <p>
                 Hello! I am a woman in my early twenties, who loooooooves all
@@ -87,9 +79,9 @@
 
               <p class="farewell">Love, Sally &#9829;</p>
             </section>
-            <section class="latest align-center flexbox border-green">
-              <h2>Latest blogposts</h2>
-              <div class="latest-card flexbox align-center latest-book">
+            <section class="latest align-center flexbox">
+              <p>Latest blogposts</p>
+              <div class="latest-card flexbox align-center">
                 <img src="/Images/twilight.jpeg" alt="" />
                 <a href="HTML/blogpost.html"><p>Autumn top 10 books</p></a>
               </div>
@@ -105,7 +97,6 @@
                 <li>The Selection</li>
               </ul>
             </section>
-
             <section class="follow border-green flexbox column align-center">
               <h2>Follow Me</h2>
               <ul class="flexbox">
