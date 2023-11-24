@@ -12,10 +12,11 @@
     <title>The Bookworm Club</title>
     <link rel="stylesheet" href="/CSS/global-style.css" />
     <link rel="stylesheet" href="/CSS/index-style.css" />
+    <script src="/JavaScript/index.js" defer></script>
   </head>
 
   <body class="flexbox">
-    <div class="content-wrapper align-center white">
+    <div class="content-wrapper column align-center white">
       <header class="flexbox column">
         <nav class="flexbox align-center left-30">
           <a class="bookwormTitle flexbox prata" href="/index.html"
@@ -26,7 +27,7 @@
             <li><a href="/index.html">Home</a></li>
             <li><a href="/HTML/about.html">About</a></li>
             <li><a href="/HTML/blog.html">Blog</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="/HTML/contact.html">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -54,38 +55,21 @@
           </div>
         </section>
 
-        <div class="divider flexbox align-center green">
+        <div class="divider column flexbox align-center green">
           <h2 class="prata">Our latest blog posts...</h2>
         </div>
         <article class="blobby flexbox align-center">
           <div class="flexbox carousel">
-            <div class="latest-card flexbox">
-              <img src="/Images/autumn.png" alt="" />
-              <a href="HTML/blogpost.html"><p>Autumn top 10 books</p></a>
-              <p>This autumn has been full of great suprises, in terms ...</p>
-              <a href="/HTML/blogpost.html"><p>Read more</p></a>
-            </div>
-            <div class="latest-card flexbox">
-              <img src="/Images/twilight.jpeg" alt="" />
-              <a href="HTML/blogpost.html"
-                ><p>Twilight 15 year anniversary!</p></a
-              >
-              <p>
-                It has been nothing short of 15 years since the world was
-                granted the gift of the Twilight Saga.
-              </p>
-              <a href="HTML/blogpost.html"><p>Read more</p></a>
-            </div>
-            <div class="latest-card flexbox">
-              <img src="/Images/hotcocoa.png" alt="" />
-              <a href="HTML/blogpost.html"><p>Christmas is coming</p></a>
-              <p>
-                Ho ho ho, christmas is on its way, and it is time to grab your
-                favorite hot beverage and sit down.
-              </p>
-              <a href="HTML/blogpost.html"><p>Read more</p></a>
+            
+          </div>
+          <<div id="carousel-container" class="carousel-container">
+            <div class="carousel-inner">
+              <!-- Bilder vil bli lagt til her dynamisk -->
             </div>
           </div>
+          <button onclick="prevSlide()">Forrige</button>
+          <button onclick="nextSlide()">Neste</button>
+          
         </article>
       </main>
 

@@ -15,7 +15,7 @@
   </head>
 
   <body class="flexbox">
-    <div class="content-wrapper align-center white">
+    <div class="content-wrapper column align-center white">
       <header class="flexbox column">
         <nav class="flexbox align-center left-30">
           <a class="bookwormTitle flexbox prata" href="/index.html"
@@ -32,41 +32,58 @@
       </header>
 
       <main>
-        <div class="divider flexbox align-center green">
+        <div class="divider column flexbox align-center green">
           <h1 class="prata">Welcome to the Bookworm Club!</h1>
           <p>Last updated: Nov 17, 2023</p>
         </div>
         <div class="grid">
           <article class="blogpost-article flexbox">
-            <div>
-              <div class="flexbox column">
+              <div class="article-inner flexbox column">
                 <div>
                     <p>Have a burning question about your favorite book? Or perhaps you just want to share the excitement of a
                         recently discovered literary gem? We're all ears! Drop us a line using the form below, and let the bookish
                         conversations begin!</p>
                 </div>
-                <form>
+                <div class="flexbox align-center column">
+                <form class="grid">
+
+                  <label for="Name" class="en">Your name, please</label>
                     <input 
                     type = "text" 
                     name = "Name"
                     id = "Name"
+                    class=to
                     />
-                    <label for="Name">Name </label>
-                    
+
+                    <label class="tre" for="e-mail">Provide your email</label>
                     <input 
                     type="email" 
                     name="e-mail" 
                     id="e-mail"
+                    class="fire"
                     />
-                    <label for="e-mail">E-mail address</label>
 
+                    <label for="Subject" class="fem">Regarding subject</label>
+                    <input 
+                    type = "text" 
+                    name = "Subject"
+                    id = "Subject"
+                    class="seks"
+                    />
 
+                    <label for="Message" class="syv">Write your thoughts</label>
+                    <input 
+                    type = "text" 
+                    name = "Message"
+                    id = "Message"
+                    class="eight"
+                    />
                 </form>
               </div>
             </div>
           </article>
-          <div class="grid-column-2 flexbox">
-            <section class="sally center flexbox">
+          <div class="grid-column-2 column flexbox">
+            <section class="sally column flexbox">
               <img src="/Images/sal.png" alt="" />
               <p>
                 Hello! I am a woman in my early twenties, who loooooooves all
@@ -79,9 +96,9 @@
 
               <p class="farewell">Love, Sally &#9829;</p>
             </section>
-            <section class="latest align-center flexbox">
+            <section class="latest column align-center flexbox">
               <p>Latest blogposts</p>
-              <div class="latest-card flexbox align-center">
+              <div class="latest-card column flexbox align-center">
                 <img src="/Images/twilight.jpeg" alt="" />
                 <a href="HTML/blogpost.html"><p>Autumn top 10 books</p></a>
               </div>

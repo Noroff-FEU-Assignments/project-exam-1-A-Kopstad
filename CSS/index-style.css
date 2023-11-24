@@ -49,11 +49,11 @@ h2{
 
 .latest-card{
     background-color: white;
-    width: 330px;
-    height: 450px;
+    max-width: 330px;
+    height: 400px;
     justify-content: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 60px;
     box-shadow: 0px 2px 7px #b5b5b5;
     text-align: center;
 }
@@ -61,4 +61,67 @@ h2{
 .latest-card img{
     height: 250px;
     object-fit: contain;
+    width: auto;
 }
+
+.latest-card span{
+    font-weight: bold;
+}
+.divider{
+    margin: 150px 0px 150px 0px;
+    align-items: center;
+    padding-left: 0;
+}
+
+.card-bottom{
+    justify-content: space-between;
+}
+
+.card-top{
+    gap: 30px;
+    font-size: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+
+  .carousel {
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 33.33%; /* Justerer bredden basert på antall elementer som vises per gang */
+    box-sizing: border-box;
+    padding: 0 10px; /* Legg til en avstand mellom lysbildene hvis ønskelig */
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Juster plasseringen av forrige og neste knapper om nødvendig */
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .carousel-prev {
+    left: 0;
+  }
+  
+  .carousel-next {
+    right: 0;
+  }
+  

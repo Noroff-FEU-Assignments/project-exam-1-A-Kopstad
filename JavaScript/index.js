@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const endpoint = "https://bookworms.websolutionscore.com/wp-json/wp/v2/posts?_embed";
     const url = cors + endpoint;
   
-    const retrievedCarousel = document.querySelector(".carousel");
-  
+    const retrievedCarousel = document.querySelector(".carousel-container");
+
     // Sjekk om retrievedCarousel er null før du fortsetter
     if (!retrievedCarousel) {
       console.error("Element with class 'carousel' not found.");
@@ -14,7 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentSlide = 0;
     const slidesToShow = 3;
   
-    // Fetch funksjon
+    function nextSlide() {
+      currentSlide += 1;
+      updateCarousel();
+    }
+  
+    function prevSlide() {
+      currentSlide -= 1;
+      updateCarousel();
+    }
+  
     async function apiCall() {
       try {
         const response = await fetch(url, {
@@ -27,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
         const result = await response.json();
   
-        const carouselInner = retrievedCarousel.querySelector(".carousel-inner");
+const carouselInner = retrievedCarousel.querySelector(".carousel-inner");
   
         // Loop gjennom hvert resultat og legg til bildene i carouselInner
         for (let i = 0; i < result.length; i++) {
@@ -45,18 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // Lag et nytt bildeelement og legg til det i carouselInner
           const slide = document.createElement("div");
           slide.classList.add("carousel-slide");
-          slide.innerHTML = `
-            <img src="${imageUrl}" alt="${imageAlt}">
-            <a href="HTML/blogpost.html">
-              <div class="card-top flexbox column">
-                <p>${carouselLoop.title.rendered}</p>
-              </div>
-            </a>
-            <div class="card-bottom flexbox">
-              <p>${formattedDate}</p>
-              <span> <p>by Sally Hawthorne</p> </span>
-            </div>
-          `;
+          slide.innerHTML = `<img src="${imageUrl}" alt="${imageAlt}">`;
           carouselInner.appendChild(slide);
         }
   
@@ -83,65 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
       carouselInner.style.transform = `translateX(${translateValue}%)`;
     }
   
-    function prevSlide() {
-      currentSlide -= 1;
-      updateCarousel();
-    }
-  
-    function nextSlide() {
-      currentSlide += 1;
-      updateCarousel();
-    }
-  
-    // Bruk fetch-funksjonen og deretter parseAndCreateSlides-funksjonen
     apiCall();
   });
   
-
-
-
-
-
-
-
-    //     const cors = "https://noroffcors.onrender.com/";
-    // const endpoint = "https://bookworms.websolutionscore.com/wp-json/wp/v2/posts?_embed";
-    // const url = cors + endpoint;
-    
-    // async function apiCall() {
-    //     try {
-    //         const response = await fetch(url, {
-    //             method: 'GET'
-    //         });
-    
-    //         if (!response.ok) {
-    //             throw new Error(`HTTP error! Status: ${response.status}`);
-    //         }
-    
-    //         const result = await response.json();
-    
-    //         carousel.innerHTML = "";
-    
-    //         for (let i = 0; i < result.length; i++) {
-    //             if (i === 3) {
-    //                 break;
-    //             }
-                
-    //             const carouselLoop = result[i];
-    
-    //             const carouselCard = document.createElement ('div')
-    
-    //             carouselCard.classList.add('carousel-card')
-    
-    //             carouselCard.dataset.productId = allResults.id;
-    
-    //             const imageUrl = carouselLoop.images.length > 0 ? allResults.images[0].src : '';
-    //         }
-    //     } catch (error) {
-    //         console.error('Fetch error:', error);
-    //         newIn.innerHTML = "An error has occurred";
-    //     }
-    // }
-    
-    // apiCall();
-    // });
+  
+  
+  

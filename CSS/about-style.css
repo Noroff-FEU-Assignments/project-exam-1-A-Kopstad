@@ -78,3 +78,50 @@ article h2{
 .introduction{
     gap: 60px;
 }
+
+.divider p{
+    margin-left: 75px;
+}
+
+@media (max-width: 1400px){
+    .grid-column-2{
+        margin-right: 40px;
+    }
+
+    .divider{
+        flex-wrap: wrap;
+    }
+    
+    h1{
+        width: 510px;
+    }
+
+    .blogpost-article{
+        padding: 60px 100px 60px 100px;
+    }
+
+    .divider{
+        padding: 0;
+    }
+
+    .content-wrapper{
+        padding: 0;
+    }
+
+    nav{
+        margin-top: 50px;
+        gap: 365px;
+    }
+}
+
+@media (max-width: 1000px){
+    .blogpost-article{
+        font-size: 17px;
+        padding: 50px 50px 50px 50px;
+    }
+
+    .blogpost-article span{
+        margin-top: 40px;
+        display: flex;
+    }
+}

@@ -15,14 +15,11 @@ html{
     background-color: #8f6757;
 }
 
-.column{
-    flex-direction: column;
-}
 
 nav{
-    justify-content: space-between;
-    margin-top: 60px;
+    justify-content: space-around;
     padding: 0px 20px 20px 20px;
+    gap: 750px;
 }
 
 nav ul{
@@ -36,9 +33,16 @@ nav ul{
     gap: 10px;
 }
 
+.column{
+    flex-direction: column;
+}
 
 .flexbox{
     display: flex;
+}
+
+.grid{
+    display: grid;
 }
 
 
@@ -75,15 +79,34 @@ nav ul{
 .content-wrapper{
     max-width: 1700px;
     margin: 0 auto;
-    flex-direction: column;
     box-shadow: 0px 5px 10px #272524;
     width: 100%;
+    padding: 50px
 }
 
 .divider{
     justify-content: center;
     height: 230px;
-    margin: 150px 0px 150px 0px;
+    margin: 30px 0px 30px 0px;
+    align-items: baseline;
+    font-size: 30px;
+    gap: 15px;
+}
+
+.divider p{
+    font-size: 20px;
+}
+
+.grid-column-2 {
+    grid-row: 1;
+    grid-column: 2;
+    gap: 20px;
+    justify-self: center;
+}
+
+.wrap{
+    float: right;
+    margin: 5px;
 }
 
 .reading-list{
@@ -120,7 +143,6 @@ nav ul{
 .sally{
     border: 10px solid #EDE9D0;
     width: 200px;
-    flex-direction: column;
     padding: 20px;
     gap: 20px;
     line-height: 30px;
@@ -135,4 +157,46 @@ nav ul{
 .farewell{
     word-wrap: break-word;
     width: 60px;
+}
+
+.blogpost-article{
+    grid-row: 1;
+    grid-column: 1;
+    border: 10px solid #EDE9D0;
+    justify-content: center;
+    padding: 60px 200px 60px 200px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.blogpost-article img{
+    height: 400px;
+}
+
+.latest{
+    border: 10px solid #EDE9D0;
+    width: 200px;
+    padding: 20px;
+    gap: 30px;
+}
+
+.latest-card{
+    background-color: white;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0px 1px 6px #b5b5b5;
+    padding: 20px;
+}
+
+.latest-card img{
+    width: 130px;
+}
+
+.heading{
+    padding: 50px 0px 50px 0px;
+}
+
+h1{
+    margin-left: 75px;
 }
