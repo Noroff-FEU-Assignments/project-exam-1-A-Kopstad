@@ -217,9 +217,12 @@ object-fit: cover;
     .cocoa{
         width: auto;
     }
+
+    
 }
 
 @media (max-width: 700px){
+    
     .archive-post img{
         width: 100px;
     }

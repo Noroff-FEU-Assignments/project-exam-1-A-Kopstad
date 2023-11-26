@@ -72,7 +72,7 @@ nav ul{
 }
 
 .border-green{
-    border: 10px solid #EDE9D0;
+    border: 7px solid #EDE9D0;
 
 }
 
@@ -141,7 +141,7 @@ nav ul{
 }
 
 .sally{
-    border: 10px solid #EDE9D0;
+    border: 7px solid #EDE9D0;
     width: 200px;
     padding: 20px;
     gap: 20px;
@@ -162,7 +162,7 @@ nav ul{
 .blogpost-article{
     grid-row: 1;
     grid-column: 1;
-    border: 10px solid #EDE9D0;
+    border: 7px solid #EDE9D0;
     justify-content: center;
     padding: 60px 200px 60px 200px;
     font-size: 20px;
@@ -175,7 +175,7 @@ nav ul{
 }
 
 .latest{
-    border: 10px solid #EDE9D0;
+    border: 7px solid #EDE9D0;
     width: 200px;
     padding: 20px;
     gap: 30px;
@@ -200,3 +200,4 @@ nav ul{
 h1{
     margin-left: 75px;
 }
+

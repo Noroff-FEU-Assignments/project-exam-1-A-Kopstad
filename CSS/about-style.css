@@ -118,10 +118,91 @@ article h2{
     .blogpost-article{
         font-size: 17px;
         padding: 50px 50px 50px 50px;
+        text-align: left;
     }
 
     .blogpost-article span{
         margin-top: 40px;
         display: flex;
     }
+
+    .grid-column-2{
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px){
+    .grid-column-2{
+        line-height: 35px;
+        max-width: 100%;
+    }
+
+    .sally{
+        flex-direction: row;
+        width: auto;
+    }
+
+    .introduction{
+        gap: 35px;
+    }
+
+    .wrapper{
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .farewell{
+        width: auto;
+    }
+
+    .latest{
+        width: auto
+    }
+    
+    .latest-card{
+        width: 90%;
+    }
+
+    .latest-card img{
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h1{
+        font-size: 40px;
+        width: 340px;
+    }
+    
+    .grid{
+        display: initial;
+    }
+}
+
+@media (max-width: 600px){
+    .blogpost-article{
+        padding: 50px 20px 50px 20px;
+    }
+
+    .grid{
+        margin: 0px 20px 50px 20px;
+    }
+
+    .sally{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 25px;
+        margin-left: 20px;
+        width: 325px;
+    }
+
+    .divider p{
+        margin-left: 20px;
+        font-size: 15px;
+    }
+
 }
