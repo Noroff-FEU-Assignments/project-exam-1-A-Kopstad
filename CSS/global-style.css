@@ -215,7 +215,7 @@ h1{
 }
 
 
- @media (max-width: 1000px){
+@media (max-width: 1000px){
 
     nav.flexbox{
         display: none;
@@ -226,14 +226,14 @@ h1{
         flex-direction: column;
         z-index: 1000px;
         position: absolute;
-        top: 50px; 
+        top: 150px; 
         left: 50%; 
         transform: translateX(-50%);
-        background:white;
-        width: 100%;
+        background:#EDE9D0;
+        width: 84.6%;
         margin: 0;
         align-items: center;
-        gap: 30px
+        gap: 30px;
 }
 
     nav.active ul{
@@ -255,8 +255,11 @@ h1{
 
     .burger-menu{
         display: flex;
-        position: absolute;
-        right: 15px;
-        z-index: 10001;
+        z-index: 1;
+        padding: 10px;
+    }
+
+    .burger-menu.active img {
+        transform: rotate(300deg);
     }
  }
