@@ -227,6 +227,11 @@ article h2{
         border: none;
     }
 
+    .grid-column-2{
+        margin: 15px;
+    }
+
+
     .grid{
         display: flex;
         flex-direction: column;
