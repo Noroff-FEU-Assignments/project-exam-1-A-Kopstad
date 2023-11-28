@@ -271,7 +271,11 @@ h1{
 
  @media (max-width:700px){
     nav.active{
-        top: 100px;
+        top: 150px;
+    }
+
+    .burger-menu{
+        margin: 50px;
     }
  }
 
