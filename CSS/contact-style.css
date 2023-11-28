@@ -16,6 +16,14 @@ form input{
     margin: 7px;
 }
 
+h1{
+    text-align: center;
+}
+
+.grid{
+    gap: 30px;
+}
+
 .form-wrap{
     gap: 30px
 }
@@ -70,4 +78,197 @@ form input{
 .eight{
     grid-column: 2;
     grid-row: 4;
+    height: 150px;
 }
+
+.grid-column-1{
+    padding-top: 20px;
+}
+
+.blogpost-article{
+    border: none;
+}
+
+.grid-flex{
+    display: grid;
+}
+
+@media (max-width: 1500px){
+    .heading{
+        margin-left: 100px;
+        justify-content: center;
+    }
+
+    .blogpost-article{
+        padding: 60px 100px 60px 100px;
+    }
+
+    .heading img{
+        margin-right: 180px;
+    }
+
+    .content-wrapper{
+        padding: 0;
+    }
+
+    .grid-column-1{
+        margin-left: 50px;
+    }
+    
+    .grid-column-2{
+        margin-right: 50px;
+    }
+
+
+}
+
+@media (max-width: 1000px){
+    .grid-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .content{
+        flex-wrap: wrap;
+    }
+
+    .grid-column-1{
+        margin: 30px;
+    }
+
+    .grid-column-2{
+        margin: 30px;
+    }
+
+    .sally{
+        flex-direction: row;
+        width: auto;
+    }
+
+    .introduction{
+        gap: 35px;
+    }
+
+    .wrapper{
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .farewell{
+        width: auto;
+    }
+
+    .latest{
+        width: auto
+    }
+    
+    .latest-card{
+        width: 90%;
+    }
+
+    .latest-card img{
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h1{
+        font-size: 36px;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .grid{
+        display: initial;
+    }
+}
+
+@media (max-width: 700px){
+    .blogpost-article{
+        padding: 20px 20px 50px 20px;
+    }
+
+    form{
+        font-size: 17px;
+    }
+    .grid{
+        margin: 0px 20px 50px 20px;
+    }
+
+    .sally{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    .divider p{
+        margin-left: 20px;
+        font-size: 15px;
+    }
+
+    .heading{
+        margin:0;
+    }
+
+    .heading img{
+        margin-right: 0;
+    }
+
+    main p{
+        font-size: 17px;
+    }
+    
+    .content-wrapper{
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 500px){
+    .grid-column-1{
+        padding: 5px;
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogpost-article{
+        padding: 0px;
+    }
+
+    .blog-text{
+        width: 300px;
+    }
+
+    .heading-text{
+        text-align: center;
+        flex-wrap: wrap;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .heading-text p{
+        font-size: 17px;
+    }
+
+    h1{
+        align-self: center;
+    }
+
+    .sally img{
+        width: 150px;
+        height: 164px;
+    }
+
+    .follow ul{
+        gap: 8px;
+        width: 150px;
+    }
+}
+   
