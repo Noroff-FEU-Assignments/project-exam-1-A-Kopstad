@@ -177,11 +177,16 @@ article h2{
     .grid{
         display: initial;
     }
+
+    .blogpost-article{
+        margin: 50px
+    }
 }
 
 @media (max-width: 600px){
     .blogpost-article{
         padding: 50px 20px 50px 20px;
+        border: none;
     }
 
     .grid{
@@ -203,6 +208,10 @@ article h2{
     .divider p{
         margin-left: 20px;
         font-size: 15px;
+    }
+
+    .grid-column-2{
+        margin: 15px;
     }
 
 }

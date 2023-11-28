@@ -27,6 +27,8 @@ nav ul{
     font-size: 20px;
 }
 
+
+
 .bookwormTitle{
     font-size: 25px;
     align-items: center;
@@ -200,8 +202,25 @@ nav ul{
 h1{
     margin-left: 75px;
 }
- @media (max-width: 700px){
+
+.burger-menu{
+    justify-content: flex-end;
+    display: none;
+}
+
+.burger-menu img{
+    width: auto;
+    height: 80px;
+    cursor: pointer;
+}
+
+
+ @media (max-width: 1000px){
     nav.flexbox{
         display: none;
+    }
+
+    .burger-menu{
+        display: flex;
     }
  }
