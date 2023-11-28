@@ -265,6 +265,7 @@ h1{
         transform: rotate(300deg);
     }
 
+
  }
 
  @media (max-width:700px){
@@ -275,12 +276,19 @@ h1{
     .burger-menu{
         margin: 50px;
     }
+
+
+    h1{
+        align-self: center;
+        margin: 0;
+    }
  }
 
  @media (max-width: 500px){
     .burger-menu{
         margin: 30px;
     }
+
  }
 
  
