@@ -216,11 +216,47 @@ h1{
 
 
  @media (max-width: 1000px){
+
     nav.flexbox{
         display: none;
     }
 
+    nav.active{
+        display: flex;
+        flex-direction: column;
+        z-index: 1000px;
+        position: absolute;
+        top: 50px; 
+        left: 50%; 
+        transform: translateX(-50%);
+        background:white;
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        gap: 30px
+}
+
+    nav.active ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav.active li{
+        cursor: pointer
+    }
+
+    nav.active .bookwormTitle{
+        flex-direction: column;
+    }
+    nav.active img{
+        width: 30px;
+    }
+
     .burger-menu{
         display: flex;
+        position: absolute;
+        right: 15px;
+        z-index: 10001;
     }
  }
