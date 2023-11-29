@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +11,7 @@
     <title>The Bookworm Club</title>
     <link rel="stylesheet" href="/CSS/global-style.css" />
     <link rel="stylesheet" href="/CSS/index-style.css" />
-    <script src="/JavaScript/index.js" defer></script>
+    <script src="/JavaScript/carousel.js" defer></script>
   </head>
 
   <body class="flexbox">
@@ -62,14 +61,16 @@
           <div class="flexbox carousel">
             
           </div>
-          <<div id="carousel-container" class="carousel-container">
-            <div class="carousel-inner">
-              <!-- Bilder vil bli lagt til her dynamisk -->
+          <div class="carousel-container">
+            <div class="carousel-inner flexbox">
+              <!-- Javascript carousel goes her -->
             </div>
+            <div class="buttons flexbox">
+            <button class="arrow-left">&lt;</button>
+            <button class="arrow-right">&gt;</button>
           </div>
-          <button onclick="prevSlide()">Forrige</button>
-          <button onclick="nextSlide()">Neste</button>
-          
+
+        </div>
         </article>
       </main>
 
