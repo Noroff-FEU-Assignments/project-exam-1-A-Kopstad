@@ -1,28 +1,3 @@
-    const cors = "https://noroffcors.onrender.com/";
-    const endpoint = "https://bookworms.websolutionscore.com/wp-json/wp/v2/posts?_embed";
-    const url = cors + endpoint;
-    
-    async function apiCall() {
-        try {
-            const response = await fetch(url, {
-                method: 'GET'
-            });
-    
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-    
-            const result = await response.json();
-    
-        } catch (error) {
-            console.error('Fetch error:', error);
-            newIn.innerHTML = "An error has occurred";
-        }
-    }
-    
-    apiCall();
-
-
 
     //Hamburger menu
 

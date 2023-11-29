@@ -12,7 +12,7 @@
 }
 
 html{
-    background-color: #8f6757;
+    background-color: #EDE9D0;
 }
 
 
@@ -47,10 +47,6 @@ nav ul{
     display: grid;
 }
 
-
-.left-30{
-    margin-left: 30px
-}
 
 .align-center{
     align-items: center;

@@ -17,14 +17,14 @@ async function apiCall() {
         const result = await response.json();
 
         // Create the wrapper div for the first four cards
-        const firstTwoWrapper = document.createElement('div');
-        firstTwoWrapper.classList.add('row1',"flexbox");
+        const firstTwoWrapper = document.createElement("div");
+        firstTwoWrapper.classList.add("row1","flexbox");
 
-        const secondTwoWrapper = document.createElement('div');
+        const secondTwoWrapper = document.createElement("div");
         secondTwoWrapper.classList.add("row2","flexbox");
 
         // Create the wrapper div for the last card
-        const lastCardWrapper = document.createElement('div');
+        const lastCardWrapper = document.createElement("div");
         lastCardWrapper.classList.add("row3","flexbox");
 
         for (let i = 0; i < result.length; i++) {
@@ -40,7 +40,7 @@ async function apiCall() {
             const imageAlt = image ? image.alt : "";
 
             blogCard.innerHTML = `
-                <img src="${imageUrl}" alt="${imageAlt}"/>
+                <a href="HTML/blogpost.html?id=${blogLoop.id}"><img src="${imageUrl}" alt="${imageAlt}"/></a>
                 <a href="HTML/blogpost.html?id=${blogLoop.id}"><p>${blogLoop.title.rendered}</p></a>
             `;
 

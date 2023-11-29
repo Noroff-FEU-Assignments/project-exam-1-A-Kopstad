@@ -159,6 +159,7 @@ button{
     width: 40px;
     border-radius: 20px;
     border: solid #8f6757;
+    cursor: pointer;
 }
 
 
