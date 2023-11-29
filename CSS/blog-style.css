@@ -1,4 +1,4 @@
-.wraper{
+.wrapper{
     display: grid;
 }
 .divider{
@@ -107,6 +107,10 @@ h2{
 width: 90%;
 height: 250px;
 object-fit: cover;
+}
+
+.special-card{
+    display: flex;
 }
 
 @media (max-width:1500px){

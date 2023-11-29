@@ -2,7 +2,7 @@ const cors = "https://noroffcors.onrender.com/";
 const endpoint = "https://bookworms.websolutionscore.com/wp-json/wp/v2/posts?_embed";
 const url = cors + endpoint;
 
-const retrievedCarousel= document.querySelector(".collection");
+const retrievedArchive = document.querySelector(".collection");
 
 async function apiCall() {
     try {
@@ -15,40 +15,57 @@ async function apiCall() {
         }
 
         const result = await response.json();
-        console.log(url)
 
-        retrievedCarousel.innerHTML = "";
+        // Create the wrapper div for the first four cards
+        const firstTwoWrapper = document.createElement('div');
+        firstTwoWrapper.classList.add('row1',"flexbox");
+
+        const secondTwoWrapper = document.createElement('div');
+        secondTwoWrapper.classList.add("row2","flexbox");
+
+        // Create the wrapper div for the last card
+        const lastCardWrapper = document.createElement('div');
+        lastCardWrapper.classList.add("row3","flexbox");
 
         for (let i = 0; i < result.length; i++) {
-            if (i === 5) {
-                break;
-            }
-            
             const carouselLoop = result[i];
 
-            const carouselCard = document.createElement ('div')
+            const blogCard = document.createElement('div');
+            blogCard.classList.add("archive-post","flexbox","column","align-center","border-green");
 
-            carouselCard.classList.add('carousel-card')
-
-            carouselCard.dataset.productId = carouselCard.id;
-
-            const parser = new DOMParser ()
+            const parser = new DOMParser();
             const doc = parser.parseFromString(carouselLoop.content.rendered, "text/html");
             const image = doc.querySelector("img");
             const imageUrl = image ? image.src : "";
             const imageAlt = image ? image.alt : "";
-            
-            carouselCard.innerHTML = `
+
+            blogCard.innerHTML = `
                 <img src="${imageUrl}" alt="${imageAlt}"/>
                 <a href="HTML/blogpost.html"><p>${carouselLoop.title.rendered}</p></a>
-            `
-            retrievedCarousel.appendChild(carouselCard)
+            `;
+
+
+            // Append the first two cards to the firstTwoWrapper
+            if (i < 2) {
+                firstTwoWrapper.appendChild(blogCard);
+            } else if (i < 4) {
+                secondTwoWrapper.appendChild(blogCard);
+            } else if (i === 4) {
+                lastCardWrapper.appendChild(blogCard);
+                blogCard.classList.add("cocoa");
         }
+        }
+
+        // Append the firstFourWrapper to the container
+        retrievedArchive.appendChild(firstTwoWrapper);
+        retrievedArchive.appendChild(secondTwoWrapper);
+        // Append the lastCardWrapper to the container
+        retrievedArchive.appendChild(lastCardWrapper);
+
     } catch (error) {
         console.error('Fetch error:', error);
-        retrievedCarousel.innerHTML = "An error has occurred";
+        retrievedArchive.innerHTML = "An error has occurred";
     }
 }
 
 apiCall();
-
