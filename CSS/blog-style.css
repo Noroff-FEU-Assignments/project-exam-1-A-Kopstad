@@ -97,7 +97,8 @@ h2{
     box-shadow: 0px 1px 6px #b5b5b5;
     padding: 20px;
     width: 345px;
-    height: 300px;
+    height: 370px;
+    text-align: center;
 }
 
 .cocoa{
@@ -109,9 +110,7 @@ height: 250px;
 object-fit: cover;
 }
 
-.special-card{
-    display: flex;
-}
+
 
 @media (max-width:1500px){
     .bookwormTitle{
@@ -231,10 +230,11 @@ object-fit: cover;
     }
 
     .archive-post{
-        font-size: 17px;
+        font-size: 15px;
         width: 300px;
         height: 200px;
         flex-direction: row;
+        line-height: 20px;
     }
 
     .collection{

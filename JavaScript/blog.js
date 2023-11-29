@@ -28,20 +28,20 @@ async function apiCall() {
         lastCardWrapper.classList.add("row3","flexbox");
 
         for (let i = 0; i < result.length; i++) {
-            const carouselLoop = result[i];
+            const blogLoop = result[i];
 
             const blogCard = document.createElement('div');
             blogCard.classList.add("archive-post","flexbox","column","align-center","border-green");
 
             const parser = new DOMParser();
-            const doc = parser.parseFromString(carouselLoop.content.rendered, "text/html");
+            const doc = parser.parseFromString(blogLoop.content.rendered, "text/html");
             const image = doc.querySelector("img");
             const imageUrl = image ? image.src : "";
             const imageAlt = image ? image.alt : "";
 
             blogCard.innerHTML = `
                 <img src="${imageUrl}" alt="${imageAlt}"/>
-                <a href="HTML/blogpost.html"><p>${carouselLoop.title.rendered}</p></a>
+                <a href="HTML/blogpost.html?id=${blogLoop.id}"><p>${blogLoop.title.rendered}</p></a>
             `;
 
 
