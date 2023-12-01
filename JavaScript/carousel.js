@@ -10,6 +10,12 @@ function updateCarousel(result) {
     const carouselWrapper = document.querySelector(".carousel-inner");
     carouselWrapper.innerHTML = ""; // Clear the existing content
 
+    // Function to handle navigation to blog page
+    function navigateToBlogPage(postId) {
+        const blogPageUrl = `https://thebookwormclub.netlify.app/html/blogpost/?id=${postId}`; 
+        window.location.href = blogPageUrl;
+    }
+
     // Populate carousel with the next 4 images
     for (let i = currentIndex; i < currentIndex + 3; i++) {
         const item = result[i];
@@ -26,7 +32,7 @@ function updateCarousel(result) {
             if (imageUrl) {
                 // Create a container for the image and title
                 const container = document.createElement("div");
-                container.classList.add("latest-card","flexbox")
+                container.classList.add("latest-card", "flexbox");
 
                 // Create an image element
                 const imgElement = document.createElement("img");
@@ -36,6 +42,9 @@ function updateCarousel(result) {
                 // Create a title element
                 const titleElement = document.createElement("p");
                 titleElement.innerHTML = title;
+
+                // Add click event listener to the container
+                container.addEventListener("click", () => navigateToBlogPage(item.id)); // Assuming "id" is the post ID
 
                 // Append image and title to the container
                 container.appendChild(imgElement);
@@ -47,6 +56,8 @@ function updateCarousel(result) {
         }
     }
 }
+
+
 
 // Function to handle click on left arrow
 function prevSlide(result) {
