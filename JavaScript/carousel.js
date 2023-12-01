@@ -34,7 +34,7 @@ function updateCarousel(result) {
                 imgElement.alt = imageAlt;
 
                 // Create a title element
-                const titleElement = document.createElement("h2");
+                const titleElement = document.createElement("p");
                 titleElement.innerHTML = title;
 
                 // Append image and title to the container

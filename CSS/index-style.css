@@ -9,30 +9,33 @@ h1 span{
 }
 
 h2{
-    font-size: 15px;  
+    font-size: 30px;  
     line-height: 30px;
 }
 
 .hero{
     background-image: url(/Images/greeny.png);
     background-size: 850px 600px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 100px 20px 20px 20px;
     padding-top: 70px;
 }
 
 .hero img{
     border-radius: 100px 0px 0px 0px;
+    width: 350px;
+    object-fit: cover;
 }
 
 .row2{
-    gap: 100px;
+    gap: 220px;
 }
 
 .subheader{
-    width: 720px;
+    width: 635px;
     font-weight: 100;
     font-size: 30px;
+    margin-left: 75px;
 }
 
 .blobby{
@@ -57,6 +60,7 @@ h2{
     gap: 60px;
     box-shadow: 0px 2px 7px #b5b5b5;
     text-align: center;
+    border: solid;
 }
 
 .latest-card img{
@@ -69,9 +73,8 @@ h2{
     font-weight: bold;
 }
 .divider{
-    margin: 150px 0px 150px 0px;
-    align-items: center;
-    padding-left: 0;
+    margin: 300px 0px 0px 75px;    
+    height: 0;
 }
 
 .card-bottom{
@@ -111,6 +114,7 @@ h2{
 .arrow-left {
 
     box-shadow: 2px 1px 1px #b5b5b5;
+    
 }
 
 .arrow-right {
@@ -129,7 +133,8 @@ h2{
     align-items: center;
     padding-top: 40px;
     width: 320px;
-    border-radius: 10px;
+    border-radius: 40px;
+    cursor: pointer;
 }
 
 .latest-card img{
@@ -148,19 +153,46 @@ h2{
 
 .carousel-inner p{
     word-wrap: break-word;
-    width: 200px;
     text-align: center;
+    font-size: 18px;
 }
 
 button{
     color: #8f6757;
     background: #ffffff;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
     border: solid #8f6757;
     cursor: pointer;
+    font-size: 30px;
 }
 
+.index-section2{
+    height: 500px;
+    align-items: center;
+    box-shadow: 0px 1px 6px #b5b5b5;
+}
 
+.sally{
+    width: 880px;
+    gap: 65px;
+    line-height: 50px;
+    font-size: 20px;
+    word-wrap: break-word;
+    word-break: break-word;
+    align-items: center;
+    padding-left: 75px;
+    border: none;
+}
+
+.sally img{
+    width: 300px;
+    height: 300px;
+    border: solid 5px;
+}
+
+.section2-h2{
+    margin: 300px 0px 50px 0px;
+}
 

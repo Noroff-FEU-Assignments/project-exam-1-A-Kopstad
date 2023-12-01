@@ -23,13 +23,15 @@
 
 h1{
     margin: 0;
-    font-size: 60px;
-    width: 530px;
+    font-size: 40px;
+    width: 600px;
     word-wrap: break-word;
 }
 
 .heading img{
     height: 400px;
+    /* width:400px;
+    object-fit: cover; */
 }
 
 .grid-column-1{
@@ -67,7 +69,7 @@ h1{
 margin-bottom: 50px;
 }
 
-article h2{
+h2{
     font-size: 20px;
 }
 
@@ -262,4 +264,3 @@ article h2{
 
 
 }
-   

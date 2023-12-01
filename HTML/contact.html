@@ -12,6 +12,7 @@
     <title>The Bookworm Club</title>
     <link rel="stylesheet" href="/CSS/global-style.css" />
     <link rel="stylesheet" href="/CSS/contact-style.css" />
+    <script src="/JavaScript/contact.js" defer></script>
   </head>
 
   <body class="flexbox">
@@ -43,39 +44,38 @@
                         recently discovered literary gem? We're all ears! Drop us a line using the form below, and let the bookish
                         conversations begin!</p>
                 </div>
-                <div class="flexbox align-center column">
-                <form class="grid-flex">
-                  <label for="Name" class="en">Your name, please</label>
+                <div class="form-container flexbox align-center column">
+                <form class="flexbox column">
+                  <label for="Name">Your name, please</label>
                     <input 
                     type = "text" 
                     name = "Name"
-                    id = "Name"
-                    class=to
+                    id = "name"
                     />
 
-                    <label class="tre" for="e-mail">Provide your email</label>
+                    <label for="e-mail">Provide your email</label>
                     <input 
                     type="email" 
                     name="e-mail" 
-                    id="e-mail"
-                    class="fire"
+                    id="email"
                     />
 
-                    <label for="Subject" class="fem">Regarding subject</label>
+                    <label for="Subject">Regarding subject</label>
                     <input 
                     type = "text" 
                     name = "Subject"
-                    id = "Subject"
-                    class="seks"
+                    id = "subject"
                     />
 
-                    <label for="Message" class="syv">Write your thoughts</label>
+                    <label for="Message">Write your thoughts</label>
                     <input 
                     type = "text" 
                     name = "Message"
-                    id = "Message"
-                    class="eight"
+                    id = "message"
+                    class="message"
                     />
+
+                    <button type="button" onclick="validateForm(event)">Submit</button>
                 </form>
               </div>
             </div>

@@ -1,92 +1,81 @@
 const cors = "https://noroffcors.onrender.com/";
-const endpoint = "https://bookworms.websolutionscore.com/wp-json/wp/v2/posts/${postId}?_embed";
-const url = cors + endpoint;
-
-const blogPost = document.querySelector(".grid-column-1");
 
 // Extract product ID from the URL
 const searchParams = new URLSearchParams(window.location.search);
 const productId = searchParams.get("id");
 
 async function fetchBlogPost() {
+  // Construct the URL inside the function
+  const endpoint = `https://bookworms.websolutionscore.com/wp-json/wp/v2/posts/${productId}?_embed`;
+  const url = cors + endpoint;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching post by ID:", error);
+    throw error;
+  }
+}
+
+function displayBlogPost(displayPost) {
     try {
-        const response = await fetch(url, {
-            method: 'GET'
-        });
+        const blogPost = document.querySelector(".grid-column-1");
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(displayPost.content.rendered, "text/html");
+        const image = doc.querySelector("img");
+        const pre = doc.querySelector("pre");
+        const preText = pre ? pre.textContent : "";
+        const paragraphs = doc.querySelectorAll("p");
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        const imageUrl = image ? image.src : "";
+        const imageAlt = image ? image.alt : "";
 
-        const result = await response.json();
-        
-        const blogContent= document.createElement ("div");
-        blogContent.classList.add ("blog-content","flexbox");
+        const blogPostElement = document.createElement("div");
 
-        
-
-        blogContent.innerHTML= `
+        // Start constructing the inner HTML
+        let innerHTML = `
             <div class="heading flexbox">
                 <div class="heading-text flexbox">
-                    ${title.rendered}
-                    <p>Reflecting on the magic: A quarter-century of Twilight enchantment</p>
-                    <p>Last updated: Nov 4, 2023</p>
+                    <h1>${displayPost.title.rendered}</h1>
+                    <p>Last update: ${displayPost.modified}
+                    <p>${preText}</p>
                 </div>
                 <img src="${imageUrl}" alt="${imageAlt}" />
                 <article class="blogpost-article flexbox">
-                <div class="blog-text flexbox">
-                    ${contentHtml}
-                </div>
-            </div>
-        `
-    }
-    catch {
+                    <div class="blog-text flexbox">
+        `;
 
+        // Wrap each paragraph in a story-event div and add to the inner HTML
+        paragraphs.forEach(paragraph => {
+            innerHTML += `
+                <div class="story-event">
+                    <p>${paragraph.textContent}</p>
+                </div>
+            `;
+        });
+
+        // Close the tags
+        innerHTML += `
+                    </div>
+                </article>
+            </div>
+        `;
+
+        // Set the inner HTML to the blog post element
+        blogPostElement.innerHTML = innerHTML;
+        blogPost.appendChild(blogPostElement);
+
+    } catch (error) {
+        console.error("Error displaying post:", error);
     }
 }
 
-fetchBlogPost();
+  
 
-
-//         blogPost.innerHTML = "";
-
-//         const blogContent = document.createElement("div");
-//         blogContent.classList.add("blog-content");
-//         blogContent.dataset.productId = result.id;
-
-
-//         const parser = new DOMParser();
-//         const doc = parser.parseFromString(result.content.rendered, "text/html");
-
-//         // Get image information
-//         const image = doc.querySelector("img");
-//         const imageUrl = image ? image.src : "";
-//         const imageAlt = image ? image.alt : "";
-
-//         // Get title
-
-//         blogContent.innerHTML = `
-//             <div class="heading flexbox">
-//                 <div class="heading-text flexbox">
-//                     ${title.rendered}
-//                     <p>Reflecting on the magic: A quarter-century of Twilight enchantment</p>
-//                     <p>Last updated: Nov 4, 2023</p>
-//                 </div>
-//                 <img src="${imageUrl}" alt="${imageAlt}" />
-//                 <article class="blogpost-article flexbox">
-//                 <div class="blog-text flexbox">
-//                     ${contentHtml}
-//                 </div>
-//             </div>
-//                 `;
-
-//                 blogPost.appendChild(blogContent)
-
-//     }
-//      catch (error) {
-//         console.error('Fetch error:', error);
-//         blogPost.innerHTML = "An error has occurred";
-//     }
-
-// fetchBlogPost()
-// }
+fetchBlogPost()
+  .then((displayPost) => displayBlogPost(displayPost))
+  .catch((error) => console.error("Failed to fetch and display post:", error));

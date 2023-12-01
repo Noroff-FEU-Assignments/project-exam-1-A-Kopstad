@@ -28,58 +28,10 @@ h1{
     gap: 30px
 }
 
-.grid-contact-1{
-    grid-column: 1;
-}
-
-.grid-contact-2{
-    grid-column: 2;
-}
-
 .article-inner{
     gap: 30px;
 }
 
-.en{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.to{
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.tre{
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.fire{
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.fem{
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.seks{
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.syv{
-    grid-column: 1;
-    grid-row: 4;
-}
-
-.eight{
-    grid-column: 2;
-    grid-row: 4;
-    height: 150px;
-}
 
 .grid-column-1{
     padding-top: 20px;
@@ -89,9 +41,22 @@ h1{
     border: none;
 }
 
-.grid-flex{
-    display: grid;
+input,
+textarea {
+    padding: 8px;
+    margin-bottom: 16px;
 }
+
+button {
+    padding: 10px;
+    border: 2px solid;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
+    margin: 7px;
+    margin-top: 30px;
+}
+
 
 @media (max-width: 1500px){
     .heading{
@@ -123,10 +88,6 @@ h1{
 }
 
 @media (max-width: 1000px){
-    .grid-flex{
-        display: flex;
-        flex-direction: column;
-    }
     
     .content{
         flex-wrap: wrap;
