@@ -94,126 +94,46 @@ h2{
 
 
 @media (max-width:1300px){
-.grid{
-    display: initial;
-}
-
-.grid-column-1{
-    margin: 100px;
-}
-}
-
-@media (max-width: 1000px){
- 
-
-
-
-
-
     .grid{
         display: initial;
     }
 
     .grid-column-1{
-        margin: 50px;
+        margin: 100px;
+        padding: 0;
     }
 
-    .grid-column-1{
-        display: grid;
-    }
-    
     .grid-column-2{
-        margin: 50px;
-        align-items: center;
+        margin: 100px;
         width: auto;
     }
 
- 
+    .grid-column-2 img{
+        width: 200px;
+    }
+
+    .heading{
+        justify-content: center;
+    }
+
+    .sally{
+        flex-direction: row;
+    }
 
     .sally img{
         width: 200px;
         height: 200px;
     }
 
-}
-
-@media (max-width: 700px){
-    h1{
-        font-size: 25px;
-        margin-left: 20px;
-        width: 325px;
-    }
-
-    main p{
-        font-size: 17px;
-    }
-
-    .blogpost-article{
-        padding: 50px 20px 50px 20px;
-    }
-
-    .content-wrapper{
-        justify-content: center;
-    }
-
-
-    .grid{
-        margin: 0px 20px 50px 20px;
-    }
-
-    .grid-column-1{
-        margin: 0;
-        padding: 20px;
-    }
-
-    .heading{
-        margin:0;
-    }
-
-    .heading img{
-        margin-right: 0;
-    }
-
-    .heading p{
+    .latest-blogpost-section{
+        flex-direction: row;
         width: auto;
     }
+
 }
 
-@media (max-width: 500px){
-    h1{
-        align-self: center;
-    }
-    
-    .blog-text{
-        width: 300px;
-    }
-
-    .blogpost-article{
-        padding: 0px;
-    }
-
-    .grid{
-        display: flex;
-        flex-direction: column;
-    }
-    
+@media (max-width: 900px){
     .grid-column-1{
-        padding: 5px;
-        border: none;
-    }
-
-    .grid-column-2{
-        margin: 15px;
-    }
-
-    .heading-text{
-        text-align: center;
-        flex-wrap: wrap;
-        word-wrap: break-word;
-        word-break: break-word;
-    }
-
-    .heading-text p{
-        font-size: 17px;
+        margin: 30px;
     }
 }
