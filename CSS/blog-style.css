@@ -1,54 +1,4 @@
-.wrapper{
-    display: grid;
-}
-.divider{
-    align-items: baseline;
-    font-size: 30px;
-    flex-direction: column;
-    gap: 15px;
-    font-weight: 100;
-    margin-top: 30px;
-}
-
-.divider p{
-    font-size: 20px;
-}
-
-.grid{
-    gap: 20px;
-}
-
-.wrap{
-    float: right;
-    margin: 5px;
-}
-
-
-.latest{
-    width: 200px;
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
-}
-
-.latest-card{
-    background-color: white;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-    box-shadow: 0px 1px 6px #b5b5b5;
-    padding: 20px;
-    width: 345px;
-    height: 300px;
-}
-
-.latest-card img{
-    width: 155px;
-}
-
-.divider{
-margin-bottom: 50px;
-}
+/* This CSS is sorted in an alphabetical order. */
 
 button{
     width: 200px;
@@ -59,48 +9,6 @@ button{
 
 h2{
     font-size: 20px;
-}
-
-.row1{
-    grid-row: 1;
-    gap: 50px;
-}
-
-.row2{
-    grid-row: 2;
-    gap: 50px;
-}
-
-.flexrow{
-    flex-direction: row;
-}
-
-
-.grid-column-1{
-    grid-row: 1;
-    grid-column: 1;
-    justify-content: space-evenly;
-    padding: 60px;
-    font-size: 20px;
-    line-height: 40px;
-    gap: 50px;
-    margin-right: 60px;
-    align-items: center;
-}
-
-.collection-inner{
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-}
-.latest-book{
-    width: 165px;
-}
-
-.archive-post img{
-    width: 250px;
-    height: 250px;
-    object-fit: contain;
 }
 
 .archive-post{
@@ -115,13 +23,60 @@ h2{
     text-align: center;
 }
 
+.archive-post img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
 .cocoa{
     width: 800px;
 }
+
  .cocoa img{
 width: 90%;
 height: 250px;
 object-fit: cover;
+}
+
+.collection-inner{
+}
+.collection-inner{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.divider{
+    align-items: baseline;
+    font-size: 30px;
+    gap: 15px;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0px 1px 6px #b5b5b5;
+}
+
+.divider p{
+    font-size: 20px;
+}
+
+.grid{
+    gap: 20px;
+}
+
+.grid-column-1{
+    grid-row: 1;
+    grid-column: 1;
+    justify-content: space-evenly;
+    padding: 60px;
+    font-size: 20px;
+    line-height: 40px;
+    gap: 50px;
+    margin-right: 60px;
+    align-items: center;
+    box-shadow: 0px 1px 6px #b5b5b5;
 }
 
 .group1{
@@ -132,19 +87,60 @@ object-fit: cover;
     display: grid;
 }
 
-.collection-inner{
-    margin-bottom: 50px;
+.latest-book{
+    width: 165px;
+}
+
+.latest-blogpost-section{
+    width: 200px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+}
+
+.latest-card{
+    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0px 1px 6px #b5b5b5;
+    padding: 20px;
+    width: 165px;
+}
+
+.latest-card img{
+    width: 155px;
+}
+
+.row1{
+    grid-row: 1;
+    gap: 50px;
+}
+
+.row2{
+    grid-row: 2;
+    gap: 50px;
+}
+
+.wrap{
+    float: right;
+    margin: 5px;
+}
+
+.wrapper{
+    display: grid;
+    padding: 30px;
 }
 
 @media (max-width:1500px){
-    .bookwormTitle{
-        font-size: 20px;
-    }
-
     nav{
         justify-content: space-between;
         gap: 0;
         margin-left: 40px;
+    }
+    
+    .bookwormTitle{
+        font-size: 20px;
     }
 
     .grid-column-1{
@@ -158,14 +154,34 @@ object-fit: cover;
 }
 
 @media (max-width:1280px){
-    .bookwormTitle{
-        font-size: 20px;
-    }
-
     nav{
         justify-content: space-between;
         gap: 0;
         margin-left: 40px;
+    }
+
+    .archive-post{
+        text-align: center;
+        width: 250px;
+        height: 275px;
+    }
+
+    .archive-post img{
+        height: 180px;
+        object-fit: contain;
+    }
+   
+    .bookwormTitle{
+        font-size: 20px;
+    }
+
+    .cocoa{
+        width: 480px;
+    }
+    
+    .cocoa img{
+       width: 80%;
+       object-fit: cover;
     }
 
     .grid-column-1{
@@ -180,22 +196,6 @@ object-fit: cover;
     .row2{
         justify-content: center;
     }
-    .archive-post{
-        width: auto;
-        text-align: center;
-    }
-
-    .archive-post img{
-        height: 180px;
-        object-fit: contain;
-    }
-    .cocoa{
-        width: 480px;
-    }
-    .cocoa img{
-       width: 80%;
-       object-fit: cover;
-    }
 
     .word-wrap{
         max-width: 175px;
@@ -203,6 +203,30 @@ object-fit: cover;
 }
 
 @media (max-width: 1000px){
+    .cocoa{
+        width: auto;
+    }
+
+    .follow ul{
+        gap: 10px;
+    }
+
+    .grid{
+        gap: 0px;
+    }
+
+    .grid-column-2{
+        gap: 15px;
+    }
+
+    .grid-column-2 section{
+        width: 165px;
+    }
+
+    .latest-book{
+        width: 130px;
+    }
+
     .row1{
         gap: none;
         flex-wrap: wrap;
@@ -214,43 +238,22 @@ object-fit: cover;
         justify-content: center;
     }
 
-    .grid-column-2{
-        gap: 15px;
-    }
-
-    .grid-column-2 section{
-        width: 165px;
+    .row3{
+        justify-content: center;
     }
 
     .sally img{
         max-width: 165px;
         height:auto;
-
-    }
-
-    .latest-book{
-        width: 130px;
-    }
-
-    .follow ul{
-        gap: 10px;
-    }
-
-    .row3{
-        justify-content: center;
-    }
-
-    .cocoa{
-        width: auto;
-    }
-
-    
+    }    
 }
 
 @media (max-width: 700px){
-    
-    .archive-post img{
-        width: 100px;
+    nav{
+        padding-top: 50px;
+        justify-content: center;
+        gap: 0;
+        margin: 0;
     }
 
     .archive-post{
@@ -261,40 +264,49 @@ object-fit: cover;
         line-height: 20px;
     }
 
-    .grid-column-1{
-        max-width: 500px;
-        margin: 30px;
-        border: none;
+    .archive-post img{
+        width: 100px;
     }
 
-    .wrapper{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .grid-column-2{
-        display: none;
+    .archive-post.border-green{
+        border: 4px solid #EDE9D0;
     }
 
     .content-wrapper{
         padding: 0;
     }
 
-    nav{
-        padding-top: 50px;
-        justify-content: center;
-        gap: 0;
-        margin: 0;
-    }
-
-
-    .archive-post.border-green{
-        border: 4px solid #EDE9D0;
-    }
-
     .divider{
         margin: 50px 50px 0px 50px;
+    }
+
+    .grid-column-1{
+        max-width: 500px;
+        margin: 30px;
+        border: none;
+    }
+
+    .grid-column-2{
+        width: auto;
+    }
+
+    .grid-column-2 section{
+        flex-direction: row;
+    }
+
+    .sally img{
+        width: auto;
+        height: 200px;
+    }
+
+    .sallyText{
+        flex-direction: column;
+    }
+
+    .wrapper{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -305,6 +317,12 @@ object-fit: cover;
 }
 
 @media (max-width: 380px){
+    h1{
+        align-self: center;
+        padding: 0;
+        margin: 0;
+    }
+    
     .archive-post{
         flex-wrap: wrap;
         height: 250px;
@@ -314,12 +332,6 @@ object-fit: cover;
     .archive-post img{
         height: 170px;
         width: 170px;
-    }
-
-    h1{
-        align-self: center;
-        padding: 0;
-        margin: 0;
     }
 }
 

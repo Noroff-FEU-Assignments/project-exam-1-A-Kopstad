@@ -2,58 +2,62 @@ const cors = "https://noroffcors.onrender.com/";
 const endpoint = "https://bookworms.websolutionscore.com/wp-json/wp/v2/posts?_embed&per_page=100";
 const url = cors + endpoint;
 
+//Declaring errormessage
+const errorMessage = document.querySelector(".error-message");
+
+//Declaring loader
+const loader = document.querySelector(".loader");
+
 // Global currentIndex declaration
 let currentIndex = 0;
 
 // Function to update the carousel based on the current index
 function updateCarousel(result) {
-    const carouselWrapper = document.querySelector(".carousel-inner");
-    carouselWrapper.innerHTML = ""; // Clear the existing content
+    loader.classList.remove("hidden");
+    try {
+        const carouselWrapper = document.querySelector(".carousel-inner");
+        carouselWrapper.innerHTML = ""; 
 
-    // Function to handle navigation to blog page
-    function navigateToBlogPage(postId) {
-        const blogPageUrl = `https://thebookwormclub.netlify.app/html/blogpost/?id=${postId}`; 
-        window.location.href = blogPageUrl;
-    }
+        // Populate carousel with the next 3 images
+        for (let i = currentIndex; i < currentIndex + 3 && i < result.length; i++) {
+            const item = result[i];
+            if (item) {
 
-    // Populate carousel with the next 4 images
-    for (let i = currentIndex; i < currentIndex + 3; i++) {
-        const item = result[i];
-        if (item) {
-            // Extract title
-            const title = item.title.rendered;
+                // Extract title and parse content
+                const title = item.title.rendered;
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(item.content.rendered, "text/html");
+                const image = doc.querySelector("img");
+                const imageUrl = image ? image.src : "";
+                const imageAlt = image ? image.alt : "";
 
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(item.content.rendered, "text/html");
-            const image = doc.querySelector("img");
-            const imageUrl = image ? image.src : "";
-            const imageAlt = image ? image.alt : "";
+                if (imageUrl) {
+                    // Create and append elements to the carousel
+                    const container = document.createElement("div");
+                    const anchor = document.createElement("a");
+                    anchor.href = "/HTML/blogpost.html?id=" + item.id;
+                    container.classList.add("carousel-card", "flexbox", "flex-column", "align-center");
 
-            if (imageUrl) {
-                // Create a container for the image and title
-                const container = document.createElement("div");
-                container.classList.add("latest-card", "flexbox");
+                    const imgElement = document.createElement("img");
+                    imgElement.src = imageUrl;
+                    imgElement.alt = imageAlt;
 
-                // Create an image element
-                const imgElement = document.createElement("img");
-                imgElement.src = imageUrl;
-                imgElement.alt = imageAlt;
+                    const titleElement = document.createElement("p");
+                    titleElement.innerHTML = title;
 
-                // Create a title element
-                const titleElement = document.createElement("p");
-                titleElement.innerHTML = title;
-
-                // Add click event listener to the container
-                container.addEventListener("click", () => navigateToBlogPage(item.id)); // Assuming "id" is the post ID
-
-                // Append image and title to the container
-                container.appendChild(imgElement);
-                container.appendChild(titleElement);
-
-                // Add the container to the carousel
-                carouselWrapper.appendChild(container);
+                    container.appendChild(imgElement);
+                    container.appendChild(titleElement);
+                    anchor.appendChild(container)
+                    carouselWrapper.appendChild(anchor);
+                }
             }
         }
+    } catch (error) {
+        console.error('Error updating carousel:', error);
+        errorMessage.textContent = "There was an issue updating the content. Please try again later.";
+    }
+    finally {
+        loader.classList.add("hidden"); 
     }
 }
 
@@ -95,12 +99,16 @@ document.addEventListener("DOMContentLoaded", async function () {
         updateCarousel(result);
 
     } catch (error) {
-        console.error('Feil i API-kall:', error);
-        // Handle the error as needed
+        console.error('error in API-call:', error);
+        errorMessage.textContent = "We're having trouble loading the post. Please check your connection and try again.";
+        
     }
 });
 
 async function apiCall() {
+    loader.classList.remove("hidden");
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+
     try {
         const response = await fetch(url, {
             method: 'GET'
@@ -115,6 +123,17 @@ async function apiCall() {
         
     } catch (error) {
         console.error('Feil ved henting:', error);
-        // Handle the error as needed
+        errorMessage.textContent = "We're having trouble loading the post. Please check your connection and try again.";
+        throw error;
+    }
+    finally {
+        loader.classList.add("hidden"); 
     }
 }
+
+
+
+
+
+
+

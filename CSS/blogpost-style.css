@@ -1,7 +1,58 @@
+/* This CSS is sorted in an alphabetical order. */
+
+h1{
+    margin: 0;
+    font-size: 40px;
+    width: 600px;
+    word-wrap: break-word;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.blogpost{
+    gap: 30px;
+}
+
 .blogpost-article{
     text-align: left;
     border: none;
     padding: 60px 100px 60px 100px;
+}
+
+.blog-image {
+    cursor: zoom-in;
+    height: 400px;
+
+}
+
+.blog-text{
+    gap: 30px;
+    flex-wrap: wrap;
+    word-break: break-word;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.divider{
+    margin-bottom: 50px;
+}
+
+.grid{
+    gap: 30px;
+}
+
+.grid-column-1{
+    border: 7px solid #EDE9D0;
 }
 
 .heading{
@@ -18,44 +69,12 @@
 
 .heading-text{
     gap: 20px;
-    flex-direction: column;
-}
-
-h1{
-    margin: 0;
-    font-size: 40px;
-    width: 600px;
-    word-wrap: break-word;
-}
-
-.heading img{
-    height: 400px;
-    /* width:400px;
-    object-fit: cover; */
-}
-
-.grid-column-1{
-    border: 7px solid #EDE9D0;
-    flex-direction: column;
-}
-
-.blogpost{
-    gap: 30px;
-}
-
-.latest{
-    border: 7px solid #EDE9D0;
-    width: 200px;
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
 }
 
 .latest-card{
     flex-direction: column;
     background-color: white;
     justify-content: center;
-    flex-direction: column;
     gap: 15px;
     box-shadow: 0px 1px 6px #b5b5b5;
     padding: 20px;
@@ -65,37 +84,40 @@ h1{
     width: 130px;
 }
 
-.divider{
-margin-bottom: 50px;
-}
-
-h2{
-    font-size: 20px;
-}
-
-.grid{
+.latest-blogpost-section{
+    border: 7px solid #EDE9D0;
+    width: 200px;
+    padding: 20px;
     gap: 30px;
 }
 
-.blog-text{
-    flex-direction: column;
-    gap: 30px;
-    flex-wrap: wrap;
-    word-break: break-word;
+/*Modal for bigger img*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
 }
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 65%;
+}
+
+
 
 @media (max-width: 1500px){
-    .heading{
-        margin-left: 100px;
-        justify-content: center;
-    }
 
     .blogpost-article{
         padding: 60px 100px 60px 100px;
-    }
-
-    .heading img{
-        margin-right: 180px;
     }
 
     .content-wrapper{
@@ -110,12 +132,32 @@ h2{
         margin-right: 50px;
     }
 
+    .heading{
+        margin-left: 100px;
+        justify-content: center;
+    }
 
+    .heading img{
+        margin-right: 180px;
+    }
 }
 
 @media (max-width: 1000px){
+    h1{
+        font-size: 40px;
+        width: 340px;
+    }
+
     .content{
         flex-wrap: wrap;
+    }
+
+    .farewell{
+        width: auto;
+    }
+
+    .grid{
+        display: initial;
     }
 
     .grid-column-1{
@@ -126,22 +168,8 @@ h2{
         margin: 50px;
     }
 
-    .sally{
-        flex-direction: row;
-        width: auto;
-    }
-
     .introduction{
         gap: 35px;
-    }
-
-    .wrapper{
-        flex-wrap: wrap;
-        display: flex;
-    }
-
-    .farewell{
-        width: auto;
     }
 
     .latest{
@@ -158,43 +186,48 @@ h2{
         object-fit: cover;
     }
 
-    h1{
-        font-size: 40px;
-        width: 340px;
+    .sally{
+        flex-direction: row;
+        width: auto;
     }
 
-    .grid{
-        display: initial;
+    .wrapper{
+        flex-wrap: wrap;
+        display: flex;
     }
-
-
-
 }
 
 @media (max-width: 700px){
-    .blogpost-article{
-        padding: 50px 20px 50px 20px;
-    }
-
-    .grid{
-        margin: 0px 20px 50px 20px;
-    }
-
-    .sally{
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-
     h1{
         font-size: 25px;
         margin-left: 20px;
         width: 325px;
     }
 
+    main p{
+        font-size: 17px;
+    }
+
+    .blogpost-article{
+        padding: 50px 20px 50px 20px;
+    }
+
+    .content-wrapper{
+        justify-content: center;
+    }
+
     .divider p{
         margin-left: 20px;
         font-size: 15px;
+    }
+
+    .grid{
+        margin: 0px 20px 50px 20px;
+    }
+
+    .grid-column-1{
+        margin: 0;
+        padding: 20px;
     }
 
     .heading{
@@ -205,25 +238,35 @@ h2{
         margin-right: 0;
     }
 
-    main p{
-        font-size: 17px;
-    }
-    
-    .content-wrapper{
-        justify-content: center;
-    }
-
-    .grid-column-1{
-        margin: 0;
-        padding: 20px;
-    }
-
     .heading p{
         width: auto;
+    }
+
+    .sally{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
     }
 }
 
 @media (max-width: 500px){
+    h1{
+        align-self: center;
+    }
+    
+    .blog-text{
+        width: 300px;
+    }
+
+    .blogpost-article{
+        padding: 0px;
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    
     .grid-column-1{
         padding: 5px;
         border: none;
@@ -231,20 +274,6 @@ h2{
 
     .grid-column-2{
         margin: 15px;
-    }
-
-
-    .grid{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .blogpost-article{
-        padding: 0px;
-    }
-
-    .blog-text{
-        width: 300px;
     }
 
     .heading-text{
@@ -257,10 +286,4 @@ h2{
     .heading-text p{
         font-size: 17px;
     }
-
-    h1{
-        align-self: center;
-    }
-
-
 }

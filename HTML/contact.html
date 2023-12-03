@@ -16,14 +16,17 @@
   </head>
 
   <body class="flexbox">
-    <div class="content-wrapper column align-center white">
-      <header class="flexbox column">
-        <nav class="flexbox align-center left-30">
+    <div class="content-wrapper flex-column align-center white">
+      <header class="flexbox flex-column">
+        <div class="burger-menu flexbox">
+          <img src="/Images/bookmenu.png" alt="clickable menu" />
+        </div>
+        <nav class="navigation flexbox align-center green">
           <a class="bookwormTitle flexbox prata" href="/index.html"
             ><img src="/Images/book.png" alt="the bookworm club-logo." /> The
             Bookworm Club</a
           >
-          <ul class="flexbox">
+          <ul class="menu flexbox">
             <li><a href="/index.html">Home</a></li>
             <li><a href="/HTML/about.html">About</a></li>
             <li><a href="/HTML/blog.html">Blog</a></li>
@@ -37,85 +40,84 @@
           <div class="grid-column-1 border-green">
             <h1 class="prata">Welcome to the Bookworm Club!</h1>
 
-          <article class="blogpost-article flexbox">
-              <div class="article-inner flexbox column">
+            <article class="blogpost-article flexbox">
+              <div class="article-inner flexbox flex-column">
                 <div>
-                    <p>Have a burning question about your favorite book? Or perhaps you just want to share the excitement of a
-                        recently discovered literary gem? We're all ears! Drop us a line using the form below, and let the bookish
-                        conversations begin!</p>
+                  <p>
+                    Have a burning question about your favorite book? Or perhaps
+                    you just want to share the excitement of a recently
+                    discovered literary gem? We're all ears! Drop us a line
+                    using the form below, and let the bookish conversations
+                    begin!
+                  </p>
                 </div>
-                <div class="form-container flexbox align-center column">
-                <form class="flexbox column">
-                  <label for="Name">Your name, please</label>
-                    <input 
-                    type = "text" 
-                    name = "name"
-                    id = "name"
-                    />
+                <div class="form-container flexbox align-center flex-column">
+                  <form class="flexbox flex-column" id="contactForm">
+                    <label for="name">Your name, please</label>
+                    <input type="text" name="name" id="name" />
+                    <p class="message-error" id="name-error"></p>
 
-                    <label for="e-mail">Provide your email</label>
-                    <input 
-                    type="email" 
-                    name="e-mail" 
-                    id="email"
-                    />
+                    <label for="email">Provide your email</label>
+                    <input type="email" name="email" id="email" />
+                    <p class="message-error" id="email-error"></p>
 
-                    <label for="Subject">Regarding subject</label>
-                    <input 
-                    type = "text" 
-                    name = "subject"
-                    id = "subject"
-                    />
+                    <label for="subject">Regarding subject</label>
+                    <input type="text" name="subject" id="subject" />
+                    <p class="message-error" id="subject-error"></p>
 
-                    <label for="Message">Write your thoughts</label>
-                    <input 
-                    type = "text" 
-                    name = "Message"
-                    id = "message"
-                    class="message"
-                    />
+                    <label for="content">Write your thoughts</label>
+                    <textarea
+                      name="content"
+                      id="content"
+                      class="content"
+                    ></textarea>
+                    <p class="message-error" id="content-error"></p>
 
-                    <button type="button">Submit</button>
-                </form>
-                <div class="errorMessages"></div>
+                    <button type="submit">Submit</button>
+                  </form>
+                  <div class="errorMessages"></div>
+                </div>
               </div>
-            </div>
-          </article>
-        </div>
-          <div class="grid-column-2 column flexbox">
-            <section class="sally column flexbox">
+            </article>
+          </div>
+          <div class="grid-column-2 flex-column flexbox">
+            <section class="sally flex-column flexbox">
               <img src="/Images/sal.png" alt="" />
               <div class="sallyText">
-              <p>
-                Hello! I am a woman in my early twenties, who loooooooves all
-                things books, tv-shows, movies, audiobooks, etc.
-              </p>
-              <p>
-                I hope you'll enjoy your time here with us bookworms. Hit me up
-                if you have any questions.
-              </p>
-              <p class="farewell">Love, Sally &#9829;</p>
-            </div>
+                <p>
+                  Hello! I am a woman in my early twenties, who loooooooves all
+                  things books, tv-shows, movies, audiobooks, etc.
+                </p>
+                <p>
+                  I hope you'll enjoy your time here with us bookworms. Hit me
+                  up if you have any questions.
+                </p>
+                <p class="farewell">Love, Sally &#9829;</p>
+              </div>
             </section>
-            <section class="latest column align-center flexbox">
+            <section
+              class="latest-blogpost-section flex-column align-center flexbox"
+            >
               <p>Latest blogposts</p>
-              <div class="latest-card column flexbox align-center">
+              <div class="latest-card flex-column flexbox align-center">
                 <img src="/Images/twilight.jpeg" alt="" />
                 <a href="HTML/blogpost.html"><p>Autumn top 10 books</p></a>
               </div>
               <a href="">Explore the archive</a>
             </section>
             <section
-              class="reading-list border-green flexbox column align-center"
+              class="reading-list border-green flexbox flex-column align-center"
             >
               <h2>Reading List</h2>
-              <ul class="flexbox column">
+              <ul class="flexbox flex-column">
                 <li>Perfect Chemistry</li>
                 <li>Hush Hush</li>
                 <li>The Selection</li>
               </ul>
             </section>
-            <section class="follow border-green flexbox column align-center">
+            <section
+              class="follow border-green flexbox flex-column align-center"
+            >
               <h2>Follow Me</h2>
               <ul class="flexbox">
                 <li>
@@ -135,7 +137,19 @@
         </div>
       </main>
 
-      <footer></footer>
+      <footer class="align-center flexbox flex-column green">
+        <a class="bookwormTitle flexbox prata" href="/index.html">
+          <img src="/Images/book.png" alt="the bookworm club-logo." />
+          <p class="prata">The Bookworm Club</p>
+        </a>
+        <ul class="flexbox menu">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/HTML/about.html">About</a></li>
+          <li><a href="/HTML/blog.html">Blog</a></li>
+          <li><a href="/HTML/contact.html">Contact</a></li>
+        </ul>
+        <p class="copyright">© 2023 The Bookworm Club</p>
+      </footer>
     </div>
   </body>
 </html>

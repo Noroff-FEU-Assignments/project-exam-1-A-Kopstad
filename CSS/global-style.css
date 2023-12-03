@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Prata&display=swap');
+/* This CSS is sorted in an alphabetical order. */
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Prata&display=swap');
 
 *{ 
     text-decoration: none;
@@ -8,17 +9,39 @@
     font-family: 'Merriweather Sans', sans-serif;
     margin: 0;
     background-repeat: no-repeat;
-    
 }
 
-html{
-    background-color: #EDE9D0;
+/*targeting elements*/
+body{
+    height: 100%;
 }
 
+footer{
+    height: 210px;
+    margin-top: 150px;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0px 1px 6px #b5b5b5;
+}
+
+footer p{
+    font-size: 35px;
+}
+
+footer ul{
+    gap: 30px;
+    font-size: 25px;
+}
+
+h1{
+    margin-left: 75px;
+}
 
 nav{
     justify-content: space-between;
-    padding: 0px 20px 20px 20px;
+    padding: 20px;
+    box-shadow: #ceccbc 0px 3px 8px;
+
 }
 
 nav ul{
@@ -26,37 +49,13 @@ nav ul{
     font-size: 20px;
 }
 
-
-
-.bookwormTitle{
-    font-size: 25px;
-    align-items: center;
-    gap: 10px;
+section{
+    box-shadow: #ceccbc 0px 3px 8px;
 }
 
-.column{
-    flex-direction: column;
-}
-
-.flexbox{
-    display: flex;
-}
-
-.grid{
-    display: grid;
-}
-
-
+/* styles that can easily be used on multiple elements */
 .align-center{
     align-items: center;
-}
-
-.prata{
-    font-family: 'Prata', serif;
-}
-
-.green{
-    background: #EDE9D0;
 }
 
 .beige{
@@ -64,21 +63,83 @@ nav ul{
 
 }
 
-.white{
-    background-color: #ffffff;
-}
-
 .border-green{
     border: 7px solid #EDE9D0;
 
 }
 
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.flexbox{
+    display: flex;
+}
+
+.green{
+    background: #EDE9D0;
+}
+
+.grid{
+    display: grid;
+}
+.prata{
+    font-family: 'Prata', serif;
+}
+
+
+.white{
+    background-color: #ffffff;
+}
+
+
+/* classes that are used on multiple html documents */
+
+.blogpost-article{
+    grid-row: 1;
+    grid-column: 1;
+    border: 7px solid #EDE9D0;
+    justify-content: center;
+    padding: 60px 200px 60px 200px;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.blogpost-article img{
+    height: 400px;
+}
+
+.bookwormTitle{
+    font-size: 25px;
+    align-items: center;
+    gap: 10px;
+}
+
+.burger-menu{
+    justify-content: flex-end;
+    display: none;
+}
+
+.burger-menu img{
+    width: auto;
+    height: 80px;
+    cursor: pointer;
+}
+
 .content-wrapper{
     max-width: 1700px;
     margin: 0 auto;
-    box-shadow: 0px 5px 10px #272524;
+    box-shadow: #ceccbc 4px 3px 10px;
     width: 100%;
-    padding: 50px
+}
+
+.copyright{
+    font-size: 15px;
 }
 
 .divider{
@@ -94,6 +155,31 @@ nav ul{
     font-size: 20px;
 }
 
+.error-message {
+    color: red;
+    padding-top: 25px;
+}
+
+.farewell{
+    word-wrap: break-word;
+    width: 60px;
+}
+
+.follow{
+    gap: 30px;
+    padding: 20px;
+    text-decoration: underline 2px solid;
+}
+
+.follow ul{
+    gap: 25px;
+    padding: 0;
+}
+
+.follow img{
+    width: 50px;
+}
+
 .grid-column-2 {
     grid-row: 1;
     grid-column: 2;
@@ -102,9 +188,54 @@ nav ul{
     width: 250px;
 }
 
-.wrap{
-    float: right;
-    margin: 5px;
+.heading{
+    padding: 50px 0px 50px 0px;
+}
+
+.latest-blogpost-section{
+    border: 7px solid #EDE9D0;
+    padding: 20px;
+    gap: 30px;
+}
+
+.latest-card{
+    background-color: white;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0px 1px 6px #b5b5b5;
+    padding: 20px;
+}
+
+.latest-card img{
+    width: 130px;
+}
+
+/* loader */
+.loader {
+    padding: 15px 25px;
+   justify-content: center;
+   align-items: center;
+}
+.fa-book-open{
+    margin-right: 15px;
+}
+.hidden{
+    display: none;
+}
+/* load styles end */ 
+
+.menu li{
+    transition: transform 0.4s ease-in-out;
+}
+
+.menu li:hover{
+    transform: translateY(-5px); /* Juster verdien etter ønske for ønsket løfteeffekt */
+}
+
+.portrait{
+    width: 200px;
+    height: 200px;
+    align-self: center
 }
 
 .reading-list{
@@ -123,21 +254,6 @@ nav ul{
     list-style-type: disclosure-closed;
 }
 
-.follow{
-    gap: 30px;
-    padding: 20px;
-    text-decoration: underline 2px solid;
-}
-
-.follow ul{
-    gap: 25px;
-    padding: 0;
-}
-
-.follow img{
-    width: 50px;
-}
-
 .sally{
     border: 7px solid #EDE9D0;
     padding: 20px;
@@ -145,93 +261,14 @@ nav ul{
     line-height: 30px;
 }
 
-.sally img{
-    width: 200px;
-    height: 200px;
-    align-self: center
+.wrap{
+    float: right;
+    margin: 5px;
 }
 
-.farewell{
-    word-wrap: break-word;
-    width: 60px;
-}
-
-.blogpost-article{
-    grid-row: 1;
-    grid-column: 1;
-    border: 7px solid #EDE9D0;
-    justify-content: center;
-    padding: 60px 200px 60px 200px;
-    font-size: 20px;
-    line-height: 35px;
-    text-align: center;
-}
-
-.blogpost-article img{
-    height: 400px;
-}
-
-.latest{
-    border: 7px solid #EDE9D0;
-    padding: 20px;
-    gap: 30px;
-}
-
-.latest-card{
-    background-color: white;
-    justify-content: center;
-    gap: 15px;
-    box-shadow: 0px 1px 6px #b5b5b5;
-    padding: 20px;
-}
-
-.latest-card img{
-    width: 130px;
-}
-
-.heading{
-    padding: 50px 0px 50px 0px;
-}
-
-h1{
-    margin-left: 75px;
-}
-
-.burger-menu{
-    justify-content: flex-end;
-    display: none;
-}
-
-.burger-menu img{
-    width: auto;
-    height: 80px;
-    cursor: pointer;
-}
-
-footer{
-    height: 210px;
-    margin-top: 200px;
-    justify-content: center;
-    border: solid 5px #8f6757;
-    gap: 15px;
-    box-shadow: 0px 1px 6px #b5b5b5;
-}
-
-footer p{
-    font-size: 35px;
-}
-
-footer ul{
-    gap: 30px;
-    font-size: 25px;
-}
-
-.copyright{
-    font-size: 15px;
-}
-
+/* first: elements  in an alphabetical order. 
+second: classes in an alphabetical order.*/
 @media (max-width: 1000px){
-
     nav.flexbox{
         display: none;
     }
@@ -279,23 +316,20 @@ footer ul{
     .burger-menu.active img {
         transform: rotate(300deg);
     }
-
-
  }
 
  @media (max-width:700px){
+    h1{
+        align-self: center;
+        margin: 0;
+    }
+
     nav.active{
         top: 150px;
     }
 
     .burger-menu{
         margin: 50px;
-    }
-
-
-    h1{
-        align-self: center;
-        margin: 0;
     }
  }
 
@@ -304,6 +338,22 @@ footer ul{
         margin: 30px;
     }
 
+    .sally{
+        margin: 0px 30px 0px 30px;
+    }
+
+    footer .prata{
+        font-size: 20px;
+    }
+
+    footer ul{
+        font-size: 20px;
+        flex-wrap: wrap;
+        padding: 0px 30px 0px 30px;
+        justify-content: center;
+        }
  }
+
+ 
 
  

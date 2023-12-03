@@ -4,6 +4,9 @@ const url = cors + endpoint;
 
 const retrievedArchive = document.querySelector(".collection");
 const loadMoreButton = document.querySelector(".load");
+const errorMessage = document.querySelector(".error-message");
+const loader = document.querySelector(".loader");
+
 
 let currentIndex = 0;
 const itemsPerPage = 10;
@@ -15,6 +18,8 @@ loadMoreButton.addEventListener("click", () => {
   console.log(loadMoreButton)
 
 async function apiCall(itemsToFetch) {
+  loader.classList.remove("hidden");
+  
   try {
     const response = await fetch(url, {
       method: 'GET'
@@ -35,7 +40,7 @@ async function apiCall(itemsToFetch) {
       console.log('Iteration:', i, 'Current Index:', currentIndex, 'Items to Fetch:', itemsToFetch);
 
       const blogCard = document.createElement('div');
-      blogCard.classList.add("archive-post", "flexbox", "column", "align-center", "border-green");
+      blogCard.classList.add("archive-post", "flexbox", "flex-column", "align-center", "border-green");
 
       const parser = new DOMParser();
       const doc = parser.parseFromString(blogLoop.content.rendered, "text/html");
@@ -60,9 +65,14 @@ async function apiCall(itemsToFetch) {
     loadMoreButton.style.display = currentIndex < result.length ? "block" : "none";
 
   } catch (error) {
-    console.error('Fetch error:', error);
-    retrievedArchive.innerHTML = "An error has occurred";
+    console.error("Fetch error:", error);
+    errorMessage.textContent =
+      " We're having trouble loading the content right now. Please check your internet connection, refresh the page, or try again later. "; 
+    loadMoreButton.style.display = "none"; 
   }
+  finally {
+    loader.classList.add("hidden"); 
+}
 }
 
 // Initial call to load the first set of items

@@ -1,7 +1,36 @@
+/* This CSS is sorted in an alphabetical order. */
+
+/*targeting elements*/
+
+/*typewriting animation h1*/
+.hero p{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #8f6757; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+    typing 5s steps(60, end), blink-caret .75s step-end infinite
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #8f6757; }
+  }
+
+  /*typewriting animation h1 ends*/
+
 h1{
-    font-size: 100px;
-    width: 1000px;
+    font-size: 80px;
+    max-width: 1000px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
 }
 h1 span{
     display: inline-block;
@@ -13,95 +42,22 @@ h2{
     line-height: 30px;
 }
 
-.hero{
-    background-image: url(/Images/greeny.png);
-    background-size: 850px 600px;
-    justify-content: space-between;
-    margin: 100px 20px 20px 20px;
-    padding-top: 70px;
-}
-
-.hero img{
-    border-radius: 100px 0px 0px 0px;
-    width: 350px;
-    object-fit: cover;
-}
-
-.row2{
-    gap: 220px;
-}
-
-.subheader{
-    width: 635px;
-    font-weight: 100;
+button{
+    color: #8f6757;
+    background: #ffffff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    border: solid #8f6757;
+    cursor: pointer;
     font-size: 30px;
-    margin-left: 75px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.blobby{
-    background-image: url(/Images/Blobby.png);
-    height: 700px;
-    justify-content: center;
-    background-position: center;
-
+button:hover{
+    transform: translateY(-5px); /* Juster verdien etter ønske for ønsket løfteeffekt */
 }
-
-.carousel{
-    flex-direction: row;
-    gap: 50px;
-}
-
-.latest-card{
-    background-color: white;
-    max-width: 330px;
-    height: 400px;
-    justify-content: center;
-    flex-direction: column;
-    gap: 60px;
-    box-shadow: 0px 2px 7px #b5b5b5;
-    text-align: center;
-    border: solid;
-}
-
-.latest-card img{
-    height: 250px;
-    object-fit: contain;
-    width: auto;
-}
-
-.latest-card span{
-    font-weight: bold;
-}
-.divider{
-    margin: 300px 0px 0px 75px;    
-    height: 0;
-}
-
-.card-bottom{
-    justify-content: space-between;
-}
-
-.card-top{
-    gap: 30px;
-    font-size: 20px;
-}
-
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 80%;
-    margin: 50px auto;
-}
-
-.carousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel img {
-    width: 100%;
-    object-fit: cover;
-}
+/*targeting classes*/
 
 .arrow {
     position: absolute;
@@ -127,28 +83,65 @@ h2{
     margin-top: 30px;
 }
 
-.latest-card{
-    gap: 20px;
-    background: white;
-    align-items: center;
-    padding-top: 40px;
-    width: 320px;
-    border-radius: 40px;
-    cursor: pointer;
+.blobby{
+    height: 700px;
+    justify-content: center;
+    background-position: center;
 }
 
-.latest-card img{
+.carousel{
+    gap: 50px;
+}
+
+.card-bottom{
+    justify-content: space-between;
+}
+
+.card-top{
+    gap: 30px;
+    font-size: 20px;
+}
+
+.carousel-card{
+    background-color: white;
+    max-width: 330px;
+    height: 445px;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0px 2px 7px #b5b5b5;
+    text-align: center;
+    border: solid;
+    width: 320px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-card:hover {
+    transform: translateY(-15px);
+}
+
+.carousel-card img{
     width: 250px;
     height: 330px;
-    object-fit: cover;
+    object-fit:cover;
     box-shadow: 5px 3px 10px #b5b5b5;
 }
 
+.carousel-card span{
+    font-weight: bold;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 50px auto;
+}
+
 .carousel-inner{
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     gap: 50px;
+    padding: 20px;
 }  
 
 .carousel-inner p{
@@ -157,42 +150,164 @@ h2{
     font-size: 18px;
 }
 
-button{
-    color: #8f6757;
-    background: #ffffff;
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    border: solid #8f6757;
-    cursor: pointer;
-    font-size: 30px;
+.divider{
+    margin: 150px 0px 0px 0px;
+    height: auto;
 }
 
 .index-section2{
-    height: 500px;
-    align-items: center;
-    box-shadow: 0px 1px 6px #b5b5b5;
+    height: 400px;
+    margin-top: 150px;
+    gap: 30px;
+
+}
+
+.hero{
+    justify-content: center;
+    padding: 100px;
+}
+
+.hero img{
+    width: 350px;
+    object-fit: cover;
+}
+
+.hero-column-1{
+    margin-right: 20px;
+    margin-left: 40px;
+}
+
+.hero-images{
+margin-top: 50px;
+gap: 30px;
+}
+
+.row2{
+    gap: 220px;
 }
 
 .sally{
-    width: 880px;
+    max-width: 1200px;
     gap: 65px;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 25px;
     word-wrap: break-word;
     word-break: break-word;
     align-items: center;
-    padding-left: 75px;
     border: none;
+    padding: 0;
 }
 
 .sally img{
-    width: 300px;
-    height: 300px;
-    border: solid 5px;
+    width: auto;
+    max-height: 400px;
+    box-shadow: #999683 4px 1px 10px;
 }
 
-.section2-h2{
-    margin: 300px 0px 50px 0px;
+.sallyText{
+    padding-right: 30px;
 }
 
+.subheader{
+    font-weight: 100;
+    font-size: 25px;
+}
+
+@media (max-width: 1030px){
+    h1{
+        font-size: 65px;
+    }
+
+    .hero p{
+        animation: none;
+        border-right: none; 
+        white-space: initial;
+    }
+
+    .sallyText{
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 800px){
+    h1{
+        font-size: 50px;
+    }
+
+    h1 span{
+        display: initial;
+    }
+
+    .hero{
+        padding: 100px 0px 100px 0px;
+        text-align: center;
+    }
+
+    .hero img{
+        width: 240px;
+    }
+
+    .hero-column-1{
+        gap: 15px;
+    }
+
+    .hero-images{
+        gap: 10px;
+    }
+
+    .index-section2{
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        box-shadow: none;
+        justify-content: center;
+        height: auto;
+    }
+
+    .sally{
+        max-width: 400px;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #ede9d0;
+        padding: 30px;
+        border: solid;
+        gap: 30px;
+    }
+
+    .sally img{
+        max-width: 200px;
+        height: auto;
+    }
+
+    .sallyText{
+        padding: 0;
+    }
+
+    .subheader{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 520px){
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    .sally{
+        max-width: 280px;
+    }
+
+    .sallyText{
+        font-size: 17px;
+    }
+
+    .hero-image-1{
+        display: none;
+    }
+}

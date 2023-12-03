@@ -1,50 +1,7 @@
+/* This CSS is sorted in an alphabetical order. */
 
 article h2{
     font-size: 20px;
-}
-
-.introduction{
-    gap: 60px;
-}
-
-form{
-    margin: 0;
-}
-form input{
-    border: 2px solid #8f6757;
-    border-radius: 20px;
-    margin: 7px;
-}
-
-h1{
-    text-align: center;
-}
-
-.grid{
-    gap: 30px;
-}
-
-.form-wrap{
-    gap: 30px
-}
-
-.article-inner{
-    gap: 30px;
-}
-
-
-.grid-column-1{
-    padding-top: 20px;
-}
-
-.blogpost-article{
-    border: none;
-}
-
-input,
-textarea {
-    padding: 8px;
-    margin-bottom: 16px;
 }
 
 button {
@@ -57,25 +14,67 @@ button {
     margin-top: 30px;
 }
 
+form{
+    margin: 0;
+
+}
+
+form input{
+    border: 2px solid #8f6757;
+    border-radius: 20px;
+    margin: 7px;
+    cursor: url('/Images/quill-cursor.png') 25 15, auto;
+}
+
+h1{
+    text-align: center;
+}
+
+input,
+textarea {
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+
+.article-inner{
+    gap: 30px;
+}
+
+.blogpost-article{
+    border: none;
+}
+
+.form-wrap{
+    gap: 30px
+}
+
+.grid{
+    gap: 30px;
+}
+
+.grid-column-1{
+    padding-top: 20px;
+}
+
+.introduction{
+    gap: 60px;
+}
+
+.message-error{
+    color: red;
+    font-size: 15px;
+}
 
 @media (max-width: 1500px){
-    .heading{
-        margin-left: 100px;
-        justify-content: center;
-    }
-
     .blogpost-article{
         padding: 60px 100px 60px 100px;
-    }
-
-    .heading img{
-        margin-right: 180px;
     }
 
     .content-wrapper{
         padding: 0;
     }
-
+    
     .grid-column-1{
         margin-left: 50px;
     }
@@ -84,13 +83,34 @@ button {
         margin-right: 50px;
     }
 
+    .heading{
+        margin-left: 100px;
+        justify-content: center;
+    }
+
+    .heading img{
+        margin-right: 180px;
+    }
 
 }
 
 @media (max-width: 1000px){
-    
+    h1{
+        font-size: 36px;
+        text-align: center;
+        margin: 20px;
+    }
+
     .content{
         flex-wrap: wrap;
+    }
+
+    .farewell{
+        width: auto;
+    }
+
+    .grid{
+        display: initial;
     }
 
     .grid-column-1{
@@ -101,25 +121,11 @@ button {
         margin: 30px;
     }
 
-    .sally{
-        flex-direction: row;
-        width: auto;
-    }
-
     .introduction{
         gap: 35px;
     }
 
-    .wrapper{
-        flex-wrap: wrap;
-        display: flex;
-    }
-
-    .farewell{
-        width: auto;
-    }
-
-    .latest{
+    .latest-blogpost-section{
         width: auto
     }
     
@@ -133,42 +139,41 @@ button {
         object-fit: cover;
     }
 
-    h1{
-        font-size: 36px;
-        text-align: center;
-        margin: 20px;
+    .sally{
+        flex-direction: row;
+        width: auto;
     }
 
-    .grid{
-        display: initial;
+    .wrapper{
+        flex-wrap: wrap;
+        display: flex;
     }
 }
 
 @media (max-width: 700px){
-    .blogpost-article{
-        padding: 20px 20px 50px 20px;
-    }
-
     form{
         font-size: 17px;
-    }
-    .grid{
-        margin: 0px 20px 50px 20px;
-    }
-
-    .sally{
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
     }
 
     h1{
         font-size: 25px;
     }
 
+    .blogpost-article{
+        padding: 20px 20px 50px 20px;
+    }
+
+    .content-wrapper{
+        justify-content: center;
+    }
+
     .divider p{
         margin-left: 20px;
         font-size: 15px;
+    }
+
+    .grid{
+        margin: 0px 20px 50px 20px;
     }
 
     .heading{
@@ -182,21 +187,17 @@ button {
     main p{
         font-size: 17px;
     }
-    
-    .content-wrapper{
-        justify-content: center;
-    }
 
+    .sally{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 500px){
-    .grid-column-1{
-        padding: 5px;
-    }
-
-    .grid{
-        display: flex;
-        flex-direction: column;
+    h1{
+        align-self: center;
     }
 
     .blogpost-article{
@@ -205,6 +206,20 @@ button {
 
     .blog-text{
         width: 300px;
+    }
+
+    .follow ul{
+        gap: 8px;
+        width: 150px;
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-column-1{
+        padding: 5px;
     }
 
     .heading-text{
@@ -218,18 +233,9 @@ button {
         font-size: 17px;
     }
 
-    h1{
-        align-self: center;
-    }
-
     .sally img{
         width: 150px;
         height: 164px;
-    }
-
-    .follow ul{
-        gap: 8px;
-        width: 150px;
     }
 }
    

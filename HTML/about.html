@@ -15,14 +15,17 @@
   </head>
 
   <body class="flexbox">
-    <div class="content-wrapper column align-center white">
-      <header class="flexbox column">
-        <nav class="flexbox align-center left-30">
+    <div class="content-wrapper flex-column align-center white">
+      <header class="flexbox flex-column">
+        <div class="burger-menu flexbox">
+          <img src="/Images/bookmenu.png" alt="clickable menu" />
+        </div>
+        <nav class="navigation flexbox align-center left-30">
           <a class="bookwormTitle flexbox prata" href="/index.html"
             ><img src="/Images/book.png" alt="the bookworm club-logo." /> The
             Bookworm Club</a
           >
-          <ul class="flexbox">
+          <ul class="menu flexbox">
             <li><a href="/index.html">Home</a></li>
             <li><a href="/HTML/about.html">About</a></li>
             <li><a href="/HTML/blog.html">Blog</a></li>
@@ -32,20 +35,23 @@
       </header>
 
       <main>
-        <div class="divider column flexbox align-center green">
+        <div class="divider flex-column flexbox align-center green">
           <h1 class="prata">Welcome to the Bookworm Club!</h1>
           <p>Last updated: Nov 17, 2023</p>
         </div>
         <div class="wrapper flexbox grid">
           <article class="blogpost-article flexbox">
             <div>
-              <div class="flexbox column introduction">
+              <div class="flexbox flex-column introduction">
                 <div>
                   <p>
                     Hello fellow book lovers! I'm Sally, a 24-year-old girl with
-                    an insatiable passion for books and storytelling. <span>Welcome to
-                    The Bookworm Club, a cozy corner of the internet where we
-                    can dive into the enchanting world of literature together.</span>
+                    an insatiable passion for books and storytelling.
+                    <span
+                      >Welcome to The Bookworm Club, a cozy corner of the
+                      internet where we can dive into the enchanting world of
+                      literature together.</span
+                    >
                   </p>
                 </div>
 
@@ -92,39 +98,41 @@
               </div>
             </div>
           </article>
-          <div class="grid-column-2  column flexbox">
-            <section class="sally column center flexbox">
+          <div class="grid-column-2 flex-column flexbox">
+            <section class="sally flex-column center flexbox">
               <img src="/Images/sal.png" alt="" />
               <div class="sallyText">
-              <p>
-                Hello! I am a woman in my early twenties, who loooooooves all
-                things books, tv-shows, movies, audiobooks, etc.
-              </p>
-              <p>
-                I hope you'll enjoy your time here with us bookworms. Hit me up
-                if you have any questions.
-              </p>
-              <p class="farewell">Love, Sally &#9829;</p>
-            </div>
+                <p>
+                  Hello! I am a woman in my early twenties, who loooooooves all
+                  things books, tv-shows, movies, audiobooks, etc.
+                </p>
+                <p>
+                  I hope you'll enjoy your time here with us bookworms. Hit me
+                  up if you have any questions.
+                </p>
+                <p class="farewell">Love, Sally &#9829;</p>
+              </div>
             </section>
-            <section class="latest align-center flexbox">
+            <section class="latest-blogpost-section align-center flexbox">
               <p>Latest blogposts</p>
-              <div class="latest-card column flexbox align-center">
+              <div class="latest-card flex-column flexbox align-center">
                 <img src="/Images/twilight.jpeg" alt="" />
                 <a href="HTML/blogpost.html"><p>Autumn top 10 books</p></a>
               </div>
             </section>
             <section
-              class="reading-list border-green flexbox column align-center"
+              class="reading-list border-green flexbox flex-column align-center"
             >
               <h2>Reading List</h2>
-              <ul class="flexbox column">
+              <ul class="flexbox flex-column">
                 <li>Perfect Chemistry</li>
                 <li>Hush Hush</li>
                 <li>The Selection</li>
               </ul>
             </section>
-            <section class="follow border-green flexbox column align-center">
+            <section
+              class="follow border-green flexbox flex-column align-center"
+            >
               <h2>Follow Me</h2>
               <ul class="flexbox">
                 <li>
@@ -144,7 +152,19 @@
         </div>
       </main>
 
-      <footer></footer>
+      <footer class="align-center flexbox flex-column green">
+        <a class="bookwormTitle flexbox prata" href="/index.html">
+          <img src="/Images/book.png" alt="the bookworm club-logo." />
+          <p class="prata">The Bookworm Club</p>
+        </a>
+        <ul class="flexbox menu">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/HTML/about.html">About</a></li>
+          <li><a href="/HTML/blog.html">Blog</a></li>
+          <li><a href="/HTML/contact.html">Contact</a></li>
+        </ul>
+        <p class="copyright">© 2023 The Bookworm Club</p>
+      </footer>
     </div>
   </body>
 </html>

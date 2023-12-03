@@ -11,18 +11,26 @@
     <title>The Bookworm Club</title>
     <link rel="stylesheet" href="/CSS/global-style.css" />
     <link rel="stylesheet" href="/CSS/index-style.css" />
+    <script src="/JavaScript/global.js" defer></script>
     <script src="/JavaScript/carousel.js" defer></script>
+    <script
+    src="https://kit.fontawesome.com/282fd42550.js"
+    crossorigin="anonymous"
+  ></script>
   </head>
 
   <body class="flexbox">
-    <div class="content-wrapper column align-center white">
-      <header class="flexbox column">
-        <nav class="flexbox align-center left-30">
+    <div class="content-wrapper flex-column align-center white">
+      <header class="flexbox flex-column">
+        <div class="burger-menu flexbox">
+          <img src="/Images/bookmenu.png" alt="clickable menu" />
+        </div>
+        <nav class="navigation flexbox align-center green">
           <a class="bookwormTitle flexbox prata" href="/index.html"
             ><img src="/Images/book.png" alt="the bookworm club-logo." /> The
             Bookworm Club</a
           >
-          <ul class="flexbox">
+          <ul class="flexbox menu">
             <li><a href="/index.html">Home</a></li>
             <li><a href="/HTML/about.html">About</a></li>
             <li><a href="/HTML/blog.html">Blog</a></li>
@@ -32,37 +40,39 @@
       </header>
 
       <main>
-        <section class="hero flexbox">
-          <div class="hero-column-1">
-            <h1 class="left-30 prata">
+        <section class="hero flexbox flex-column align-center">
+          <div class="hero-column-1 flexbox flex-column">
+            <h1 class="prata">
               Welcome to <span> the Bookworm Club
             </h1>
 
-            <div class="row2 flexbox">
-              <p class="subheader left-30">
+            <p class="subheader">
                 Join us in our land of books. This is a space where we discuss
                 all things book-related.
               </p>
-
+          </div>
+          <div class="hero-images flexbox">
               <div class="hero-image-1 flexbox">
                 <img src="/Images/headerimg1.png" alt="" />
               </div>
-            </div>
-          </div>
           <div class="hero-image-2 flexbox left-30">
             <img src="/Images/headerimg2.png" alt="" />
           </div>
+          </div>
         </section>
-
         <div class="divider column flexbox align-center">
           <h2 class="prata">Latest blog posts...</h2>
         </div>
-        <section class="blobby flexbox align-center">
-          <div class="flexbox carousel">
+         <!--Error Message Carousel-->
+         <div class="error-message flexbox"></div>
+         <!--Loader for posts-->
+<div class="loader flexbox hidden flexbox"><i class="fa-solid fa-book-open fa-flip fa-2x"></i>Loading...</div>
+        <section class="blobby flexbox align-center green">
+          <div class="flexbox flex-row carousel">
             
           </div>
           <div class="carousel-container">
-            <div class="carousel-inner flexbox">
+            <div class="carousel-inner align-center flexbox flex-row">
               <!-- Javascript carousel goes her -->
             </div>
             <div class="buttons flexbox">
@@ -72,7 +82,6 @@
         </div>
       </section>
 
-      <h2 class="section2-h2">About me</h2>
       <section class="index-section2 flexbox green">
         <div class="sally center flexbox">
           <img src="/Images/sal.png" alt="" />
@@ -90,12 +99,12 @@
       </section>
       </main>
 
-      <footer class="align-center flexbox column green">
+      <footer class="align-center flexbox flex-column green">
         <a class="bookwormTitle flexbox prata" href="/index.html">
             <img src="/Images/book.png" alt="the bookworm club-logo." /> 
             <p class="prata">The Bookworm Club </p> 
         </a>
-        <ul class="flexbox">
+        <ul class="flexbox menu">
           <li><a href="/index.html">Home</a></li>
           <li><a href="/HTML/about.html">About</a></li>
           <li><a href="/HTML/blog.html">Blog</a></li>
