@@ -104,18 +104,11 @@ h2{
 }
 
 @media (max-width: 1000px){
-    h1{
-        font-size: 40px;
-        width: 340px;
-    }
+ 
 
-    .content{
-        flex-wrap: wrap;
-    }
 
-    .farewell{
-        width: auto;
-    }
+
+
 
     .grid{
         display: initial;
@@ -125,37 +118,23 @@ h2{
         margin: 50px;
     }
 
-    .grid-column-2{
-        margin: 50px;
-    }
-
-    .introduction{
-        gap: 35px;
-    }
-
-    .latest{
-        width: auto
+    .grid-column-1{
+        display: grid;
     }
     
-    .latest-card{
-        width: 90%;
-    }
-
-    .latest-card img{
-        height: 150px;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .sally{
-        flex-direction: row;
+    .grid-column-2{
+        margin: 50px;
+        align-items: center;
         width: auto;
     }
 
-    .wrapper{
-        flex-wrap: wrap;
-        display: flex;
+ 
+
+    .sally img{
+        width: 200px;
+        height: 200px;
     }
+
 }
 
 @media (max-width: 700px){
@@ -197,12 +176,6 @@ h2{
 
     .heading p{
         width: auto;
-    }
-
-    .sally{
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
     }
 }
 
