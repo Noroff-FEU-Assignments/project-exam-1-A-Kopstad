@@ -27,6 +27,10 @@ h2{
 
 }
 
+.blogpost-wrapper{
+    flex-wrap: wrap;
+}
+
 .blog-text{
     gap: 30px;
     flex-wrap: wrap;
@@ -43,10 +47,8 @@ h2{
     cursor: pointer;
 }
 
-
-
 .grid{
-    gap: 30px;
+    margin: 0;
 }
 
 .grid-column-1{
@@ -54,7 +56,6 @@ h2{
 }
 
 .heading{
-    margin-left: 100px;
     gap: 50px;
     flex-wrap: wrap;
 }
@@ -67,26 +68,6 @@ h2{
 
 .heading-text{
     gap: 20px;
-}
-
-.latest-card{
-    flex-direction: column;
-    background-color: white;
-    justify-content: center;
-    gap: 15px;
-    box-shadow: 0px 1px 6px #b5b5b5;
-    padding: 20px;
-}
-
-.latest-card img{
-    width: 130px;
-}
-
-.latest-blogpost-section{
-    border: 7px solid #EDE9D0;
-    width: 200px;
-    padding: 20px;
-    gap: 30px;
 }
 
 /*Modal for bigger img*/
@@ -112,32 +93,14 @@ h2{
 
 
 
-@media (max-width: 1500px){
+@media (max-width:1300px){
+.grid{
+    display: initial;
+}
 
-    .blogpost-article{
-        padding: 60px 100px 60px 100px;
-    }
-
-    .content-wrapper{
-        padding: 0;
-    }
-
-    .grid-column-1{
-        margin-left: 50px;
-    }
-    
-    .grid-column-2{
-        margin-right: 50px;
-    }
-
-    .heading{
-        margin-left: 100px;
-        justify-content: center;
-    }
-
-    .heading img{
-        margin-right: 180px;
-    }
+.grid-column-1{
+    margin: 100px;
+}
 }
 
 @media (max-width: 1000px){

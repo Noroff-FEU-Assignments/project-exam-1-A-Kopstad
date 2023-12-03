@@ -1,9 +1,5 @@
 /* This CSS is sorted in an alphabetical order. */
 
-article h2{
-    font-size: 20px;
-}
-
 button {
     padding: 10px;
     border: 2px solid;
@@ -25,40 +21,22 @@ form input, form textarea{
     cursor: url('/Images/quill-cursor.png') 25 15, auto;
 }
 
-h1{
-    text-align: center;
-}
-
 input,
 textarea {
     padding: 8px;
     margin-bottom: 16px;
 }
 
-
 .article-inner{
     gap: 30px;
 }
 
-.blogpost-article{
-    border: none;
-}
+
 
 .form-wrap{
     gap: 30px
 }
 
-.grid{
-    gap: 30px;
-}
-
-.grid-column-1{
-    padding-top: 20px;
-}
-
-.introduction{
-    gap: 60px;
-}
 
 .message-error{
     color: red;
@@ -70,174 +48,14 @@ textarea {
     color: green;
 }
 
-@media (max-width: 1500px){
-    .blogpost-article{
-        padding: 60px 100px 60px 100px;
-    }
 
-    .content-wrapper{
-        padding: 0;
-    }
-    
-    .grid-column-1{
-        margin-left: 50px;
-    }
-    
-    .grid-column-2{
-        margin-right: 50px;
-    }
-
-    .heading{
-        margin-left: 100px;
-        justify-content: center;
-    }
-
-    .heading img{
-        margin-right: 180px;
-    }
-
-}
-
-@media (max-width: 1000px){
-    h1{
-        font-size: 36px;
-        text-align: center;
-        margin: 20px;
-    }
-
-    .content{
-        flex-wrap: wrap;
-    }
-
-    .farewell{
-        width: auto;
-    }
-
-    .grid{
-        display: initial;
-    }
-
-    .grid-column-1{
-        margin: 30px;
-    }
-
-    .grid-column-2{
-        margin: 30px;
-    }
-
-    .introduction{
-        gap: 35px;
-    }
-
-    .latest-blogpost-section{
-        width: auto
-    }
-    
-    .latest-card{
-        width: 90%;
-    }
-
-    .latest-card img{
-        height: 150px;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .sally{
-        flex-direction: row;
-        width: auto;
-    }
-
-    .wrapper{
-        flex-wrap: wrap;
-        display: flex;
-    }
-}
 
 @media (max-width: 700px){
     form{
         font-size: 17px;
     }
 
-    h1{
-        font-size: 25px;
-    }
-
-    .blogpost-article{
-        padding: 20px 20px 50px 20px;
-    }
-
-    .content-wrapper{
-        justify-content: center;
-    }
-
-
-
-    .grid{
-        margin: 0px 20px 50px 20px;
-    }
-
-    .heading{
-        margin:0;
-    }
-
-    .heading img{
-        margin-right: 0;
-    }
-
     main p{
         font-size: 17px;
     }
-
-
-    .sally{
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
 }
-
-@media (max-width: 500px){
-    h1{
-        align-self: center;
-    }
-
-    .blogpost-article{
-        padding: 0px;
-    }
-
-    .blog-text{
-        width: 300px;
-    }
-
-    .follow ul{
-        gap: 8px;
-        width: 150px;
-    }
-
-    .grid{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .grid-column-1{
-        padding: 5px;
-    }
-
-    .heading-text{
-        text-align: center;
-        flex-wrap: wrap;
-        word-wrap: break-word;
-        word-break: break-word;
-    }
-
-    .heading-text p{
-        font-size: 17px;
-    }
-
-    .sally img{
-        width: 150px;
-        height: 164px;
-    }
-}
-   
