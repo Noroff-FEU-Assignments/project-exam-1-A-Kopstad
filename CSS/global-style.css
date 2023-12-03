@@ -14,6 +14,10 @@
 }
 
 /*targeting elements*/
+article h2{
+    font-size: 20px;
+}
+
 body{
     height: 100%;
 }
@@ -88,7 +92,10 @@ section{
 
 .grid{
     display: grid;
+    gap: 20px;
+    margin: 0px 50px 50px 50px;
 }
+
 .rampart-one{
     font-family: 'Rampart one', sans-serif;
 }
@@ -104,11 +111,11 @@ section{
 .blogpost-article{
     grid-row: 1;
     grid-column: 1;
-    border: 7px solid #EDE9D0;
+    border: 10px solid #EDE9D0;
     justify-content: center;
     padding: 60px 200px 60px 200px;
     font-size: 20px;
-    line-height: 35px;
+    line-height: 50px;
     text-align: center;
 }
 
@@ -146,16 +153,20 @@ section{
 }
 
 .divider{
+    align-items: baseline;
+    padding-left: 50px;
+    font-size: 30px;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 100;
+    margin: 30px 0px 50px 0px;
     justify-content: center;
     height: 230px;
-    margin: 30px 0px 30px 0px;
-    align-items: baseline;
-    font-size: 30px;
-    gap: 15px;
 }
 
 .divider p{
     font-size: 20px;
+    margin-left: 75px;
 }
 
 .error-message {
@@ -183,6 +194,19 @@ section{
     width: 50px;
 }
 
+.grid-column-1{
+    grid-row: 1;
+    grid-column: 1;
+    justify-content: space-evenly;
+    padding: 60px;
+    font-size: 20px;
+    line-height: 40px;
+    gap: 50px;
+    margin-right: 60px;
+    align-items: center;
+    box-shadow: 0px 1px 6px #b5b5b5;
+}
+
 .grid-column-2 {
     grid-row: 1;
     grid-column: 2;
@@ -196,14 +220,18 @@ section{
 }
 
 .latest-blogpost-section{
-    border: 7px solid #EDE9D0;
+    border: 10px solid #EDE9D0;
+    width: 200px;
+    flex-direction: column;
     padding: 20px;
     gap: 30px;
 }
 
 .latest-card{
+    flex-direction: column;
     background-color: white;
     justify-content: center;
+    flex-direction: column;
     gap: 15px;
     box-shadow: 0px 1px 6px #b5b5b5;
     padding: 20px;
@@ -232,7 +260,7 @@ section{
 }
 
 .menu li:hover{
-    transform: translateY(-5px); /* Juster verdien etter ønske for ønsket løfteeffekt */
+    transform: translateY(-5px); 
 }
 
 .portrait{
@@ -264,6 +292,10 @@ section{
     line-height: 30px;
 }
 
+.grid-column-2 img{
+    object-fit: contain;
+}
+
 .wrap{
     float: right;
     margin: 5px;
@@ -271,7 +303,55 @@ section{
 
 /* first: elements  in an alphabetical order. 
 second: classes in an alphabetical order.*/
+
+@media (max-width:1500px){
+    nav{
+        justify-content: space-between;
+        gap: 0;
+        margin-left: 40px;
+    }
+}
+@media (max-width: 1400px){
+    h1{
+        width: 500px;
+    }
+
+    .blogpost-article{
+        padding: 60px 100px 60px 100px;
+    }
+
+    .content-wrapper{
+        padding: 0;
+    }
+
+    .divider{
+        flex-wrap: wrap;
+        padding: 0;
+        align-items: center;
+    }
+
+    .divider p{
+        width: 500px;
+        margin: 0;
+
+    }
+
+    .grid-column-2{
+        margin-right: 40px;
+    }
+}
 @media (max-width: 1000px){
+    .blogpost-article{
+        font-size: 17px;
+        padding: 50px 50px 50px 50px;
+        text-align: left;
+    }
+
+    .blogpost-article span{
+        margin-top: 40px;
+        display: flex;
+    }
+
     nav.flexbox{
         display: none;
     }
@@ -318,12 +398,79 @@ second: classes in an alphabetical order.*/
     .burger-menu.active img {
         transform: rotate(300deg);
     }
+
+    .grid-column-2{
+        margin: 0;
+    }
+ }
+
+ @media (max-width: 800px){
+    h1{
+        font-size: 40px;
+    }
+
+    .blogpost-article{
+        margin: 50px;
+        line-height: 35px;
+    }
+
+    .farewell{
+        width: auto;
+    }
+
+    .follow ul{
+        gap: 10px;
+    }
+
+    .grid{
+        display: initial;
+    }
+
+    .grid-column-2{
+        line-height: 35px;
+        margin: 50px;
+        width: 100%;
+    }
+
+    .grid-column-2 section{
+        flex-direction: column;
+    }
+
+    .latest-blogpost-section{
+        width: auto
+    }
+
+    .latest-card{
+        width: 90%;
+    }
+
+    .latest-card img{
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .sally{
+        flex-direction: row;
+        width: auto;
+    }
+
+    .sally img{
+        height: 200px;
+    }
+
+    .wrapper{
+        flex-wrap: wrap;
+        display: flex;
+    }
  }
 
  @media (max-width:700px){
     h1{
         align-self: center;
-        margin: 0;
+        font-size: 30px;
+        margin-left: 20px;
+        width: 325px;
     }
 
     nav.active{
@@ -333,16 +480,51 @@ second: classes in an alphabetical order.*/
     .burger-menu{
         margin: 50px;
     }
- }
+
+    .divider p{
+        margin-left: 20px;
+        font-size: 20px;
+        width: 325px;
+    }
+
+    .grid{
+        margin: 0px 20px 50px 20px;
+    }
+
+    .grid-column-1{
+        padding: 25px;
+    }
+
+    .grid-column-2{
+        margin: 15px;
+    }
+
+    .grid-column-2 section{
+        margin: 30px;
+    }
+
+    .sally{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sally img{
+        height: 150px;
+    }
+
+    .blogpost-article{
+        padding: 50px 20px 50px 20px;
+        border: none;
+        margin: 5px;
+    }
+}
 
  @media (max-width: 500px){
     .burger-menu{
         margin: 30px;
     }
 
-    .sally{
-        margin: 0px 30px 0px 30px;
-    }
 
     footer .rampart-one{
         font-size: 20px;
@@ -353,6 +535,17 @@ second: classes in an alphabetical order.*/
         flex-wrap: wrap;
         padding: 0px 30px 0px 30px;
         justify-content: center;
+        }
+
+        .sally{
+            margin: 0px 30px 0px 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        .sally img{
+            height: 150px;
         }
  }
 

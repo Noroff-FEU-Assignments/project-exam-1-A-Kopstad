@@ -65,6 +65,11 @@ textarea {
     font-size: 15px;
 }
 
+.message-success {
+    display: none;
+    color: green;
+}
+
 @media (max-width: 1500px){
     .blogpost-article{
         padding: 60px 100px 60px 100px;
@@ -166,10 +171,7 @@ textarea {
         justify-content: center;
     }
 
-    .divider p{
-        margin-left: 20px;
-        font-size: 15px;
-    }
+
 
     .grid{
         margin: 0px 20px 50px 20px;
@@ -186,6 +188,7 @@ textarea {
     main p{
         font-size: 17px;
     }
+
 
     .sally{
         flex-wrap: wrap;

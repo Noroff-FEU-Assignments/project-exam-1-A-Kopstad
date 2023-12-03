@@ -1,4 +1,9 @@
-function validateForm() {
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('contactForm').addEventListener('submit', validateForm);
+});
+
+function validateForm(event) {
+    event.preventDefault();
     var isValid = true;
 
     // Name validation
@@ -12,7 +17,7 @@ function validateForm() {
 
     // Email validation
     var email = document.getElementById('email').value;
-    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
         document.getElementById('email-error').innerText = 'Invalid email address';
         isValid = false;
@@ -38,20 +43,24 @@ function validateForm() {
         document.getElementById('content-error').innerText = '';
     }
 
-    // If all fields are valid, you can proceed with form submission or further processing
+
     if (isValid) {
-        // Form submission logic here
-        console.log('Form is valid. Submitting...');
-        // You might want to actually submit the form here
+        // this cleare the fields after submitting is succesfully submitted
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('subject').value = '';
+        document.getElementById('content').value = '';
+
+       
+        var submissionMessage = document.getElementById('submission-message');
+        submissionMessage.innerText = 'Thank you for connecting with The Bookworm Club - your message matters to us!';
+        submissionMessage.style.display = 'block';
+
+        // will hide the succesfull submitted text after a delay
+        setTimeout(function() {
+            submissionMessage.style.display = 'none';
+        }, 8000); 
+
+        
     }
 }
-
-document.querySelectorAll('input').forEach(input => {
-    input.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            // Trigger the form's submit event
-            this.form.dispatchEvent(new Event('submit'));
-        }
-    });
-  });

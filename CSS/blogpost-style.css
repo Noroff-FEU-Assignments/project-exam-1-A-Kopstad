@@ -43,9 +43,7 @@ h2{
     cursor: pointer;
 }
 
-.divider{
-    margin-bottom: 50px;
-}
+
 
 .grid{
     gap: 30px;
@@ -216,10 +214,6 @@ h2{
         justify-content: center;
     }
 
-    .divider p{
-        margin-left: 20px;
-        font-size: 15px;
-    }
 
     .grid{
         margin: 0px 20px 50px 20px;
