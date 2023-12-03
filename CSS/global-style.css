@@ -1,6 +1,7 @@
 /* This CSS is sorted in an alphabetical order. */
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
 
 *{ 
     text-decoration: none;
@@ -9,6 +10,7 @@
     font-family: 'Merriweather Sans', sans-serif;
     margin: 0;
     background-repeat: no-repeat;
+    font-weight: 100;
 }
 
 /*targeting elements*/
@@ -87,8 +89,8 @@ section{
 .grid{
     display: grid;
 }
-.prata{
-    font-family: 'Prata', serif;
+.rampart-one{
+    font-family: 'Rampart one', sans-serif;
 }
 
 
@@ -118,6 +120,7 @@ section{
     font-size: 25px;
     align-items: center;
     gap: 10px;
+    font-family: Rampart one, sans-serif;
 }
 
 .burger-menu{
@@ -292,6 +295,7 @@ second: classes in an alphabetical order.*/
         display: flex;
         flex-direction: column;
         padding: 0;
+        text-align: center;
     }
 
     nav.active li{
@@ -309,8 +313,6 @@ second: classes in an alphabetical order.*/
     .burger-menu{
         display: flex;
         z-index: 1;
-        padding: 10px;
-        border: solid 4px;
     }
 
     .burger-menu.active img {
@@ -342,7 +344,7 @@ second: classes in an alphabetical order.*/
         margin: 0px 30px 0px 30px;
     }
 
-    footer .prata{
+    footer .rampart-one{
         font-size: 20px;
     }
 

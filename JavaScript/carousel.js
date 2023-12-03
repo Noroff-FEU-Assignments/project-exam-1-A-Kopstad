@@ -2,6 +2,9 @@ const cors = "https://noroffcors.onrender.com/";
 const endpoint = "https://bookworms.websolutionscore.com/wp-json/wp/v2/posts?_embed&per_page=100";
 const url = cors + endpoint;
 
+//Holding fetched data. 
+let result;
+
 //Declaring errormessage
 const errorMessage = document.querySelector(".error-message");
 
@@ -11,6 +14,16 @@ const loader = document.querySelector(".loader");
 // Global currentIndex declaration
 let currentIndex = 0;
 
+//function for interactive carusel(screenwidth). 
+function getNumberOfItemsToShow() {
+    if (window.innerWidth > 1355) {
+        return 3; // Show 3 items for screens wider than 1355px
+    } else if (window.innerWidth > 900) {
+        return 2; // Show 2 items for screens between 900px and 1355px
+    } else {
+        return 1; // Show 1 item for screens smaller than 900px
+    }
+}
 // Function to update the carousel based on the current index
 function updateCarousel(result) {
     loader.classList.remove("hidden");
@@ -18,8 +31,10 @@ function updateCarousel(result) {
         const carouselWrapper = document.querySelector(".carousel-inner");
         carouselWrapper.innerHTML = ""; 
 
+        const itemsToShow = getNumberOfItemsToShow();
+
         // Populate carousel with the next 3 images
-        for (let i = currentIndex; i < currentIndex + 3 && i < result.length; i++) {
+        for (let i = currentIndex; i < currentIndex + itemsToShow && i < result.length; i++){
             const item = result[i];
             if (item) {
 
@@ -60,34 +75,44 @@ function updateCarousel(result) {
         loader.classList.add("hidden"); 
     }
 }
+window.addEventListener('resize', () => {
+    updateCarousel(result); // Replace 'yourResultArray' with the variable holding your data
+});
 
 
+//
 
-// Function to handle click on left arrow
+// Navigates backward in the carousel based on the current screen size.
 function prevSlide(result) {
+    const itemsToShow = getNumberOfItemsToShow();
+    
     if (currentIndex > 0) {
-        currentIndex -= 3;
+        currentIndex -= itemsToShow;
     } else {
-        currentIndex = result.length - 3; // Wrap around to the end
+        currentIndex = Math.max(0, result.length - itemsToShow);
+    }
+    currentIndex = Math.max(0, currentIndex); 
+    updateCarousel(result);
+}
+
+
+// Navigates forward in the carousel, adapting to the screen size.
+function nextSlide(result) {
+    const itemsToShow = getNumberOfItemsToShow();
+    
+    if (currentIndex < result.length - itemsToShow) {
+        currentIndex += itemsToShow;
+    } else {
+        currentIndex = 0;
     }
     updateCarousel(result);
 }
 
-// Function to handle click on right arrow
-function nextSlide(result) {
-    if (currentIndex < result.length - 3) {
-        currentIndex += 3;
-    } else {
-        currentIndex = 0; // Wrap around to the beginning
-    }
-    updateCarousel(result);
-}
 
 // I've added an EventListener to make sure that the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", async function () {
     try {
-        // Wait for apiCall to complete before proceeding
-        const result = await apiCall();
+        result = await apiCall();
 
         // Event listeners for arrow clicks
         const arrowLeft = document.querySelector(".arrow-left");
@@ -105,9 +130,24 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
+function setupCarousel(result) {
+    // Event listeners for arrow clicks
+    const arrowLeft = document.querySelector(".arrow-left");
+    const arrowRight = document.querySelector(".arrow-right");
+    arrowLeft.addEventListener("click", () => prevSlide(result));
+    arrowRight.addEventListener("click", () => nextSlide(result));
+
+    // Initial load of carousel
+    updateCarousel(result);
+
+    // Update carousel on window resize
+    window.addEventListener('resize', () => {
+        updateCarousel(result);
+    });
+}
+
 async function apiCall() {
     loader.classList.remove("hidden");
-    await new Promise((resolve) => setTimeout(resolve, 5000));
 
     try {
         const response = await fetch(url, {

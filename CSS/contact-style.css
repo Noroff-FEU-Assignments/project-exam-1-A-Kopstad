@@ -19,9 +19,8 @@ form{
 
 }
 
-form input{
+form input, form textarea{
     border: 2px solid #8f6757;
-    border-radius: 20px;
     margin: 7px;
     cursor: url('/Images/quill-cursor.png') 25 15, auto;
 }
