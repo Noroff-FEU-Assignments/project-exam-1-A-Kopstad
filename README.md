@@ -1,68 +1,50 @@
-## Project Exam 1
+# The Bookworm Club
 
-## Goal
+<img width="1684" alt="The bookworm club screenshot" src="https://github.com/Noroff-FEU-Assignments/project-exam-1-A-Kopstad/assets/126067888/843da07b-fd58-4558-84ac-f7c3c98c44c9">
 
-To put into practice the skills learned over your first year of studies.
+The Bookworm Club is a book blog, with a wish to gather all booklovers. 
+## Description
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+The Bookworm Club opts to gather fellow bookloving people, and has a goal of attracting people over to social media and comment fields. The author, Sally, also wants to have an organized page where she can list all her book reviews. 
 
-### Home Page
+Goals for the page
 
-The home page should feature a 'Latest Posts' section, designed as a carousel (slider) for the desktop version. As an example, you could display four posts at a time, although you're welcome to adjust this number to better suit your design. Users should be able to click an arrow on the right to scroll through to the next set of posts, and an arrow on the left to view the previous set. For the mobile version, you are free to alter the layout as you deem appropriate, without being tied to a carousel format.
+- Make a commentfield
+- "Sort by" list
+- Social proofing
 
-### Blog Page
+## Built With
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+The website is built with 
+- HTML
+- CSS
+- JS
+- Headless CMS with WP
 
-### Blog Specific Page
+## Getting Started
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+### Installing
 
-If images on the blog specific page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+Before getting started, clone the repository
 
-### Contact page
+1. Clone the repo:
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+```bash
+git clone git@github.com:A-Kopstad/project-exam-1-A-Kopstad.git```
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+And make sure to have the following installed:
 
-### WordPress
+1. Install a code editor.
+2. Download and install a live server in your code editor.
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+### Running
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+To run the project, open the project using the Live Server extension, and it will automatically launch the application in your default web browser.
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+## Contributing
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+If you want to contribute to this project, make sure to make a pull request.
 
-## Level 1 Process
+## Contact
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
-
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
-
+If you want to reach out to me for inquiries, message me on [LinkedIn](https://www.linkedin.com/in/alexandra-k-2212a7214/) 
