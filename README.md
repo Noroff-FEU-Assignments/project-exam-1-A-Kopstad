@@ -30,7 +30,8 @@ Before getting started, clone the repository
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:A-Kopstad/project-exam-1-A-Kopstad.git```
+git clone git@github.com:A-Kopstad/project-exam-1-A-Kopstad.git
+```
 
 And make sure to have the following installed:
 
